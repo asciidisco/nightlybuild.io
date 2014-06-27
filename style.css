@@ -1,0 +1,230 @@
+/*
+ * Nightlybuild.io
+ *
+ * @authors: Anselm Hannemann, Sebastian Golasch, Hans Christian Reinl
+ * @date: 2014-06-27
+ *
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: ' ';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: boder-box;
+}
+
+body {
+	background: #1e243e;
+	color: #fff;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+	color: #e6143b;
+}
+
+h2 {
+	margin: 3rem auto 1rem auto;
+	padding: 2rem 0 1rem 0;
+	border-top: thin solid #e6143b;
+	font-size: 2rem;
+}
+
+a {
+	color: #0188e1; /* color2: #e6143b | color3: #ea6336; */
+}
+
+ul {
+	padding: 0;
+}
+
+.button {
+	text-align: center;
+}
+
+.big-button {
+	display: inline-block;
+	margin: 2rem auto 1rem auto;
+	padding: 1rem 2.5rem;
+
+	text-decoration: none;
+	text-align: center;
+
+	background: #0188e1;
+	color: #fff;
+}
+
+.header,
+.main,
+.footer {
+	margin: 0 auto;
+	max-width: 60rem;
+
+	line-height: 1.4;
+}
+
+.header {
+
+}
+
+	.header h1 {
+		margin: 3rem auto 0 auto;
+	}
+
+	.header .date {
+		margin: 0.5rem auto;
+		font-size: 1.4rem;
+		color: #fff;
+	}
+
+	.header p {
+		max-width: 25rem;
+		margin: 1rem auto 3rem auto;
+
+		text-align: center;
+		color: #9ebecd;
+	}
+
+/* Terminal style */
+.hardfacts {
+
+}
+
+	pre {
+		font-family: 'Menlo', Monaco, monospace;
+		font-size: 1rem;
+		line-height: 1.2;
+		padding: 0.25rem 1rem;
+
+		background: #000;
+		color: #ddd;
+	}
+
+	pre .command-prompt {
+		color: #0188e1;
+	}
+
+	pre .green {
+		color: #9ebecd;
+	}
+
+.speakers ul,
+.sponsors ul,
+.broughtoyouby ul {
+	list-style: none;
+}
+
+	.speakers li,
+	.sponsors li,
+	.broughtoyouby li {
+		float: left;
+		width: 19%;
+		margin: 0.6%;
+	}
+
+	.speakers li:first-child,
+	.sponsors li:first-child,
+	.broughtoyouby li:first-child {
+		margin-left: 0;
+	}
+
+	.speakers li:last-child,
+	.sponsors li:last-child,
+	.broughtoyouby li:last-child {
+		margin-right: 0;
+	}
+
+		.speakers li > img,
+		.sponsors li img,
+		.broughtoyouby li > img {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+.speakers {
+
+}
+
+.location {
+	background: attr('data-background');
+	background-size: cover;
+}
+
+.sponsors {
+
+}
+
+	.sponsors ul {
+		max-width: 35rem;
+		margin: 0 auto;
+		list-style: none;
+	}
+
+.schedule table {
+	border: 0;
+	width: 100%;
+}
+
+	.schedule td {
+		vertical-align: top;
+		padding: 1.5rem 1.5rem 0.5rem;
+		border-bottom: thin solid #9ebecd;
+	}
+
+		.schedule td:first-child {
+			width: 40%;
+			text-align: right;
+		}
+
+		.schedule td > h3 {
+			margin: 0;
+		}
+
+.footer {
+	margin: 10rem auto 0;
+	padding: 1rem 0;
+	border-top: thin solid #0188e1;
+	color: #1e243e;
+}
+
+.footer:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 40rem;
+	margin-top: -4rem;
+
+	background: #9ebecd;
+}
+
+	.footer h4 {
+		text-align: center;
+	}
+
+	.broughtoyouby {
+
+	}
+
+		.broughtoyouby li > img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 50%;
+		}
