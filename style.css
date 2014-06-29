@@ -277,3 +277,29 @@ img {
 			height: auto;
 			border-radius: 50%;
 		}
+
+.modal-tickets {
+	display: none;
+	padding: 1rem;
+	color: #00161d;
+}
+
+	.modal-tickets:target {
+		display: block;
+		position: fixed;
+		top: 25vh;
+		left: 15vw;
+		width: 70vw;
+		min-height: 20rem;
+		max-height: 50vh;
+		background: #fff;
+		box-shadow: 0 0 50rem rgba(0, 0, 0, 1);
+	}
+
+	.modal-close {
+		position: absolute;
+		right: 1rem;
+		top: 0.4rem;
+		font-size: 2rem;
+		text-decoration: none;
+	}
