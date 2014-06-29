@@ -11,29 +11,30 @@
 
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/3.0.1/normalize.min.css">
 		<link rel="stylesheet" href="style.css">
+		<script>document.createElement('picture');</script>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header" id="top">
 			<h1>Nightlybuild.io</h1>
 			<p class="date"><time datetime="2014-09-26">September, 26th 2014</time></p>
 			<p>A hand-crafted after work event for web enthusiasts loving technology, design and inspiration in Cologne, Germany</p>
 		</header>
 
 		<main role="main" class="main">
-			<section class="hardfacts">
-<pre>
+			<section class="hardfacts" id="facts">
+<pre class="terminal" contenteditable>
 <span class="command-prompt">what &amp;&amp; when &amp;&amp; where &amp;&amp; who &amp;&amp; how-much &gt; nightlybuild.io</span>
 
-<span class="command-prompt">Running "nightlybuild:what" task</span>
+<span class="command-prompt">Running <span class="command-task">nightlybuild:what"</span> task</span>
 <span class="green">&gt;&gt;</span> Inspirational after work web design &amp; web dev conference
 
-<span class="command-prompt">Running "nightlybuild:when" task</span>
+<span class="command-prompt">Running <span class="command-task">"nightlybuild:when"</span> task</span>
 <span class="green">&gt;&gt;</span> 26th September 2014, 5:30pm to midnight
 
-<span class="command-prompt">Running "nightlybuild:where" task</span>
+<span class="command-prompt">Running <span class="command-task">"nightlybuild:where"</span> task</span>
 <span class="green">&gt;&gt;</span> Kölner Künstler Theater
 
-<span class="command-prompt">Running "nightlybuild:who" task</span>
+<span class="command-prompt">Running <span class="command-task">"nightlybuild:who"</span> task</span>
 Running test/speaker.html....<span class="green">OK</span>
 <span class="green">&gt;&gt;</span> TBA
 <span class="green">&gt;&gt;</span> TBA
@@ -41,7 +42,7 @@ Running test/speaker.html....<span class="green">OK</span>
 <span class="green">&gt;&gt;</span> TBA
 <span class="green">&gt;&gt;</span> TBA
 
-<span class="command-prompt">Running "nightlybuild:how-much" task</span>
+<span class="command-prompt">Running <span class="command-task">"nightlybuild:how-much"</span> task</span>
 File "dist/tickets.min.js" created.
 Uncompressed size: <span class="green">35</span> €.
 Compressed size: <span class="green">Drinks</span> included (<span class="green">Knowledge</span> gzipped).
@@ -53,53 +54,45 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				<p class="button"><a class="big-button" href="#tickets">Buy Your Ticket!</a></p>
 			</section>
 
-			<section class="speakers">
+			<section class="speakers" id="speakers">
 				<h2>Speakers</h2>
 
 				<p>We will have five high-level speakers for you at the conference entertaining you this evening.</p>
 
 				<ul class="clearfix">
 					<li>
-						<img src="http://placehold.it/400x400">
-						<h3>To Be Announced</h3>
-						<p><a href="https://twitter.com/toBeAnnounced">@ToBeAnnounced</a></p>
-						<p>TBA is designer at <a href="">Google Inc.</a> and shares her knowledge to people on her blog. She is founder of the product ABC.</p>
+						<img src="img/speakers/nico-hagenburger.jpeg">
+						<h3>Nico Hagenburger</h3>
+						<p><a href="https://twitter.com/Hagenburger">@Hagenburger</a></p>
+						<p>Nico is collecting subway trains. Besides that, he’s working on Sass, living style guides and making things pretty.</p>
 					</li>
 					<li>
 						<img src="http://placehold.it/400x400">
 						<h3>To Be Announced</h3>
-						<p><a href="https://twitter.com/toBeAnnounced">@ToBeAnnounced</a></p>
-						<p>TBA is designer at <a href="">Google Inc.</a> and shares her knowledge to people on her blog. She is founder of the product ABC.</p>
 					</li>
 					<li>
 						<img src="http://placehold.it/400x400">
 						<h3>To Be Announced</h3>
-						<p><a href="https://twitter.com/toBeAnnounced">@ToBeAnnounced</a></p>
-						<p>TBA is designer at <a href="">Google Inc.</a> and shares her knowledge to people on her blog. She is founder of the product ABC.</p>
 					</li>
 					<li>
 						<img src="http://placehold.it/400x400">
 						<h3>To Be Announced</h3>
-						<p><a href="https://twitter.com/toBeAnnounced">@ToBeAnnounced</a></p>
-						<p>TBA is designer at <a href="">Google Inc.</a> and shares her knowledge to people on her blog. She is founder of the product ABC.</p>
 					</li>
 					<li>
 						<img src="http://placehold.it/400x400">
 						<h3>TBA</h3>
-						<p>-</p>
-						<p>-</p>
 					</li>
 				</ul>
 			</section>
 
-			<section class="location" data-background="http://www.k-k-t.de/dam/img/vermietung/buehne-vorhaenge-hoch.jpg">
+			<section class="location" data-background="img/buehne.jpg" id="location">
 				<h2>Location</h2>
 				<p>The event will be held at the <a href="http://www.k-k-t.de/de/index.php">Kölner Künstler Theater</a> in central Cologne, Germany. The nice little theatre with its café will host you during the conference and let you enjoy the evening with all other attendees.</p>
-				<p><img src="http://www.k-k-t.de/dam/img/vermietung/Theatersaal-1.jpg" alt=""></p>
-				<p><img src="http://www.k-k-t.de/dam/img/vermietung/saal-querblick.jpg" alt=""></p>
+				<img src="img/theatersaal.jpg" alt="View to the conference stage from the audience">
+				<img src="img/saal-querblick.jpg" alt="A cozy auditorium of the theatre">
 			</section>
 
-			<section class="sponsors">
+			<section class="sponsors" id="sponsors">
 				<h2>Sponsors</h2>
 
 				<ul class="clearfix">
@@ -171,29 +164,29 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			</section>
 		</main>
 
-		<footer class="footer">
+		<footer class="footer" id="team">
 			<section class="broughtoyouby">
 				<h4>This event is brought to you by:</h4>
 
 				<ul class="clearfix">
 					<li>
-						<img src="http://twitter.com/api/users/profile_image/asciidisco/?size=original">
+						<img src="img/team/sebastian.png">
 						<p>Nerdy talking, JavaScript coding, arduino wiring Interwebs Dude. Emperor of <a href="http://dalekjs.com/">dalekjs</a>, Co-Curator of <a href="http://www.enterjs.de/">enterjsconf</a>.</p>
 					</li>
 					<li>
-						<img src="http://twitter.com/api/users/profile_image/drublic/?size=original">
+						<img src="img/team/hans.jpeg">
 						<p>Front-end dev. <a href="">@h5bp</a> team-member. Co-Host <a href="">@workingdraft</a>. Currently tripping on Front-End architecture. OSS.</p>
 					</li>
 					<li>
-						<img src="https://lh6.googleusercontent.com/-dJ_aIYVi28Y/AAAAAAAAAAI/AAAAAAAAAF0/5tciI94dX10/s240-c/photo.jpg">
+						<img src="img/team/david.jpg">
 						<p>Works at <a href="http://www.sevenval.com/en/">Sevenval GmbH</a></p>
 					</li>
 					<li>
-						<img src="http://twitter.com/api/users/profile_image/agorilla/?size=original">
+						<img src="img/team/simon.png">
 						<p>Web dev <a href="">@denkwerk</a>. Brew master <a href="">@denkbraeu</a>. #weissbier #singlemalt #effzeh #nhlducks</p>
 					</li>
 					<li>
-						<img src="http://twitter.com/api/users/profile_image/helloanselm/?size=original">
+						<img src="img/team/anselm.jpeg">
 						<p>Freelance Front-End developer. Curates <a href="http://wdrl.info/">WDRL</a>, builds <a href="http://opendevicelab.com/">ODL</a>, <a href="http://responsiveimages.org/">RICG</a>, <a href="http://use-init.com/">INIT</a>, co-hosts <a href="http://pubkon.eu/">PUBKON</a>, <a href="http://workingdraft.de/">Workingdraft</a>.</p>
 					</li>
 				</ul>

@@ -1,8 +1,8 @@
 /*
  * Nightlybuild.io
  *
- * @authors: Anselm Hannemann, Sebastian Golasch, Hans Christian Reinl
- * @date: 2014-06-27
+ * @authors: Anselm Hannemann, Sebastian Golaschs
+ * @date: 2014-06-29
  *
  */
 
@@ -24,7 +24,8 @@
 }
 
 body {
-	background: #1e243e;
+	background: #1e243e; /* deep blue */
+	background: #00161d; /* greenish black */
 	color: #fff;
 }
 
@@ -35,22 +36,29 @@ h2 {
 
 h1 {
 	font-size: 3rem;
-	color: #e6143b;
+	/*color: #e6143b; */ /* blue */
+	color: #9bdb1d; /* neon green */
 }
 
 h2 {
 	margin: 3rem auto 1rem auto;
 	padding: 2rem 0 1rem 0;
-	border-top: thin solid #e6143b;
+	border-top: thin solid #d70a59;
+	border-color: #d70a59;
 	font-size: 2rem;
 }
 
 a {
-	color: #0188e1; /* color2: #e6143b | color3: #ea6336; */
+	color: #9bdb1d;
 }
 
 ul {
 	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .button {
@@ -66,6 +74,7 @@ ul {
 	text-align: center;
 
 	background: #0188e1;
+	background: #9bdb1d;
 	color: #fff;
 }
 
@@ -87,8 +96,10 @@ ul {
 	}
 
 	.header .date {
-		margin: 0.5rem auto;
+		margin: 1.5rem auto;
+		padding: 1.5rem 0;
 		font-size: 1.4rem;
+		border: thin solid #9bdb1d;
 		color: #fff;
 	}
 
@@ -113,14 +124,46 @@ ul {
 
 		background: #000;
 		color: #ddd;
+		cursor: text;
+	}
+
+	.terminal {
+		position: relative;
+		padding-top: 3rem;
+	}
+
+	.terminal:before {
+		content: 'nightlybuild.io';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -1px;
+		right: -1px;
+		height: 1.8rem;
+		line-height: 1.8rem;
+		text-align: center;
+		font-family: 'Lucida Grande', sans-serif;
+		font-size: 0.75rem;
+		background: #ccc;
+		background-image: -webkit-linear-gradient(top, #ddd, #aaa);
+		background-image: -moz-linear-gradient(top, #ddd, #aaa);
+		background-image: linear-gradient(top, #ddd, #aaa);
+		border-radius: 0.3125rem 0.3125rem 0 0;
+		color: #3A3A53;
+		border: 1px solid hsla(0, 0%, 43%, 0.3);
+		text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.4);
 	}
 
 	pre .command-prompt {
 		color: #0188e1;
 	}
 
+	pre .command-task {
+		color: #d70a59;
+	}
+
 	pre .green {
-		color: #9ebecd;
+		color: #9bdb1d; /* neon green */
 	}
 
 .speakers ul,
@@ -129,6 +172,7 @@ ul {
 	list-style: none;
 }
 
+@media (min-width: 42em) {
 	.speakers li,
 	.sponsors li,
 	.broughtoyouby li {
@@ -148,6 +192,7 @@ ul {
 	.broughtoyouby li:last-child {
 		margin-right: 0;
 	}
+}
 
 		.speakers li > img,
 		.sponsors li img,
@@ -221,6 +266,10 @@ ul {
 
 	.broughtoyouby {
 
+	}
+
+	.footer a {
+		color: #d70a59;
 	}
 
 		.broughtoyouby li > img {
