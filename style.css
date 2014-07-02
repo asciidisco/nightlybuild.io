@@ -91,6 +91,22 @@ img {
 
 }
 
+	.logo {
+		text-indent: -999em;
+	}
+
+	.logo:after {
+		content: '';
+		display: block;
+		background: url('img/logo.png');
+		background-size: 100%;
+		width: 14rem;
+		height: 14rem;
+		text-indent: 0;
+		margin: -4rem auto 0 auto;
+		padding: 0;
+	}
+
 	.header h1 {
 		margin: 3rem auto 0 auto;
 	}
@@ -210,6 +226,12 @@ img {
 	background-size: cover;
 }
 
+.location iframe {
+	width: 100%;
+	height: auto;
+	min-height: 25rem;
+}
+
 .sponsors {
 
 }
@@ -218,6 +240,17 @@ img {
 		max-width: 35rem;
 		margin: 0 auto;
 		list-style: none;
+	}
+
+	.sponsors li {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		background: #fff;
+		padding: 0.25rem;
+	}
+
+	.sponsors img {
+		min-height: 6.25rem;
 	}
 
 .schedule table {
