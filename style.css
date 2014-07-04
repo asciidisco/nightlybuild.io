@@ -24,6 +24,7 @@
 }
 
 body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background: #1e243e; /* deep blue */
 	background: #00161d; /* greenish black */
 	color: #fff;
@@ -75,7 +76,8 @@ img {
 
 	background: #0188e1;
 	background: #9bdb1d;
-	color: #fff;
+	color: #000;
+	font-weight: bold;
 }
 
 .header,
@@ -233,7 +235,7 @@ img {
 }
 
 .sponsors {
-
+	color: #1e243e;
 }
 
 	.sponsors ul {
@@ -245,6 +247,7 @@ img {
 	.sponsors li {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+		font-size: 0.75rem;
 		background: #fff;
 		padding: 0.25rem;
 	}
@@ -330,9 +333,14 @@ img {
 	}
 
 	.modal-close {
-		position: absolute;
+		display: none;
+		position: relative;
 		right: 1rem;
 		top: 0.4rem;
 		font-size: 2rem;
 		text-decoration: none;
 	}
+
+		.modal-tickets:target .modal-close {
+			display: block;
+		}
