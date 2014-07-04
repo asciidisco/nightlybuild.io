@@ -25,6 +25,7 @@
 
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 	background: #1e243e; /* deep blue */
 	background: #00161d; /* greenish black */
 	color: #fff;
@@ -33,6 +34,7 @@ body {
 h1,
 h2 {
 	text-align: center;
+	color: #9bdb1d;
 }
 
 h1 {
@@ -44,8 +46,10 @@ h1 {
 h2 {
 	margin: 3rem auto 1rem auto;
 	padding: 2rem 0 1rem 0;
+
 	border-top: thin solid #d70a59;
 	border-color: #d70a59;
+
 	font-size: 2rem;
 }
 
@@ -60,6 +64,19 @@ ul {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+@keyframes fade-in-from-bw {
+	from {
+		-webkit-filter: grayscale(100%);
+		   -moz-filter: grayscale(100%);
+		        filter: grayscale(100%);
+	}
+	to {
+		-webkit-filter: grayscale(0%);
+		   -moz-filter: grayscale(0%);
+		        filter: grayscale(0%);
+	}
 }
 
 .button {
@@ -89,6 +106,24 @@ img {
 	line-height: 1.4;
 }
 
+.header:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+
+	background-image: linear-gradient(60deg, rgba(255, 0, 255, 0.5) 0%, rgba(255, 0, 255, 0.5) 10%, rgba(0, 255, 255, 0.5) 80%);
+
+	-webkit-filter: grayscale(80%);
+	        filter: grayscale(80%);
+
+	animation: fade-in-from-bw 10s forwards;
+}
+
 .header {
 
 }
@@ -100,13 +135,15 @@ img {
 	.logo:after {
 		content: '';
 		display: block;
-		background: url('img/logo.png');
-		background-size: 100%;
 		width: 14rem;
 		height: 14rem;
-		text-indent: 0;
 		margin: -4rem auto 0 auto;
 		padding: 0;
+
+		text-indent: 0;
+
+		background: url('img/logo.png');
+		background-size: 100%;
 	}
 
 	.header h1 {
@@ -116,7 +153,9 @@ img {
 	.header .date {
 		margin: 1.5rem auto;
 		padding: 1.5rem 0;
+
 		font-size: 1.4rem;
+
 		border: thin solid #9bdb1d;
 		color: #fff;
 	}
@@ -126,6 +165,7 @@ img {
 		margin: 1rem auto 3rem auto;
 
 		text-align: center;
+
 		color: #9ebecd;
 	}
 
@@ -135,10 +175,11 @@ img {
 }
 
 	pre {
+		padding: 0.25rem 1rem;
+
 		font-family: 'Menlo', Monaco, monospace;
 		font-size: 1rem;
 		line-height: 1.2;
-		padding: 0.25rem 1rem;
 
 		background: #000;
 		color: #ddd;
@@ -158,18 +199,21 @@ img {
 		left: -1px;
 		right: -1px;
 		height: 1.8rem;
-		line-height: 1.8rem;
-		text-align: center;
+
 		font-family: 'Lucida Grande', sans-serif;
 		font-size: 0.75rem;
+		line-height: 1.8rem;
+		text-align: center;
+
 		background: #ccc;
 		background-image: -webkit-linear-gradient(top, #ddd, #aaa);
-		background-image: -moz-linear-gradient(top, #ddd, #aaa);
-		background-image: linear-gradient(top, #ddd, #aaa);
-		border-radius: 0.3125rem 0.3125rem 0 0;
+		background-image:    -moz-linear-gradient(top, #ddd, #aaa);
+		background-image:         linear-gradient(top, #ddd, #aaa);
 		color: #3A3A53;
-		border: 1px solid hsla(0, 0%, 43%, 0.3);
 		text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.4);
+
+		border: 1px solid hsla(0, 0%, 43%, 0.3);
+		border-radius: 0.3125rem 0.3125rem 0 0;
 	}
 
 	pre .command-prompt {
@@ -239,21 +283,24 @@ img {
 }
 
 	.sponsors ul {
-		max-width: 35rem;
+		max-width: 100%;
 		margin: 0 auto;
+
 		list-style: none;
 	}
 
 	.sponsors li {
 		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		font-size: 0.75rem;
-		background: #fff;
+		        box-sizing: border-box;
 		padding: 0.25rem;
+
+		font-size: 0.75rem;
+
+		background: #fff;
 	}
 
 	.sponsors img {
-		min-height: 6.25rem;
+		min-height: 12rem;
 	}
 
 .schedule table {
@@ -262,8 +309,9 @@ img {
 }
 
 	.schedule td {
-		vertical-align: top;
 		padding: 1.5rem 1.5rem 0.5rem;
+		vertical-align: top;
+
 		border-bottom: thin solid #9ebecd;
 	}
 
@@ -279,7 +327,9 @@ img {
 .footer {
 	margin: 10rem auto 0;
 	padding: 1rem 0;
+
 	border-top: thin solid #0188e1;
+
 	color: #1e243e;
 }
 
@@ -311,12 +361,14 @@ img {
 		.broughtoyouby li > img {
 			max-width: 100%;
 			height: auto;
+
 			border-radius: 50%;
 		}
 
 .modal-tickets {
 	display: none;
 	padding: 1rem;
+
 	color: #00161d;
 }
 
@@ -328,6 +380,7 @@ img {
 		width: 70vw;
 		min-height: 20rem;
 		max-height: 50vh;
+
 		background: #fff;
 		box-shadow: 0 0 50rem rgba(0, 0, 0, 1);
 	}
@@ -337,6 +390,7 @@ img {
 		position: relative;
 		right: 1rem;
 		top: 0.4rem;
+
 		font-size: 2rem;
 		text-decoration: none;
 	}
