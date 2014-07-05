@@ -365,6 +365,11 @@ img {
 			border-radius: 50%;
 		}
 
+.footer .twitter-follow-button {
+	margin: 0 auto;
+	text-align: center;
+}
+
 .modal-tickets {
 	display: none;
 	padding: 1rem;
