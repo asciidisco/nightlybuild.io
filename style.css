@@ -31,6 +31,25 @@ body {
 	color: #fff;
 }
 
+/* Terminal font - also primary highlight font */
+pre,
+.header .date,
+.big-button_value,
+.font-primary {
+	font-family: 'Menlo', Monaco, monospace;
+}
+
+/* Primary color */
+a,
+.color-primary {
+	color: #9bdb1d /* green */
+}
+
+/* Secondary color */
+.color-secondary {
+	color: #006375 /* blue green from logo */
+}
+
 h1,
 h2 {
 	text-align: center;
@@ -51,10 +70,6 @@ h2 {
 	border-color: #d70a59;
 
 	font-size: 2rem;
-}
-
-a {
-	color: #9bdb1d;
 }
 
 ul {
@@ -85,16 +100,38 @@ img {
 
 .big-button {
 	display: inline-block;
-	margin: 2rem auto 1rem auto;
-	padding: 1rem 2.5rem;
-
+	margin: 1rem auto;
+	font-size: 1.2rem;
+	line-height: 3.5rem;
+	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
 
-	background: #0188e1;
-	background: #9bdb1d;
-	color: #000;
-	font-weight: bold;
+	clear: both;
+}
+
+.big-button_label {
+	float: left;
+	padding: 0 1.7rem;
+	color: #fff;
+	background-color: rgba(155,219,29,0.8);
+}
+
+.big-button_value {
+	float: left;
+	margin-left: 1px;
+	padding: 0 1.2rem;
+	font-size: 1.2em;
+	color: #006375;
+	background-color: #fff;
+}
+
+.big-button:hover .big-button_label {
+	background-color: #9bdb1d;
+}
+
+.big-button:hover .big-button_value {
+	color: #9bdb1d;
 }
 
 .header,
@@ -154,14 +191,17 @@ img {
 		margin: 1.5rem auto;
 		padding: 1.5rem 0;
 
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 
-		border: thin solid #9bdb1d;
 		color: #fff;
 	}
 
+	.header .summary {
+		max-width: 32rem;
+		font-size: 1.2rem;
+	}
+
 	.header p {
-		max-width: 25rem;
 		margin: 1rem auto 3rem auto;
 
 		text-align: center;
@@ -176,8 +216,6 @@ img {
 
 	pre {
 		padding: 0.25rem 1rem;
-
-		font-family: 'Menlo', Monaco, monospace;
 		font-size: 1rem;
 		line-height: 1.2;
 
