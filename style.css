@@ -33,10 +33,13 @@ body {
 
 /* Terminal font - also primary highlight font */
 pre,
+h2,
+h3,
 .header .date,
 .big-button_value,
 .font-primary {
 	font-family: 'Menlo', Monaco, monospace;
+	font-weight: normal;
 }
 
 /* Primary color */
@@ -53,7 +56,7 @@ a,
 h1,
 h2 {
 	text-align: center;
-	color: #9bdb1d;
+	color: white;
 }
 
 h1 {
@@ -62,14 +65,37 @@ h1 {
 	color: #9bdb1d; /* neon green */
 }
 
+/* Section headlines */
 h2 {
-	margin: 3rem auto 1rem auto;
-	padding: 2rem 0 1rem 0;
+	position: relative;
+	overflow: hidden;
+	margin: 1.5rem auto 0.5rem;
+	padding: 1rem 0 1rem 0;
+	font-size: 1.8rem;
+}
 
-	border-top: thin solid #d70a59;
-	border-color: #d70a59;
+/* Line left and right of headline */
+h2:before,
+h2:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 1px;
+	top: 50%;
+	background-color: #fff;
+}
 
-	font-size: 2rem;
+h2:before {
+	left: -6.5rem;
+}
+
+h2:after {
+	right: -6.5rem;
+}
+
+h3 a {
+	text-decoration: none;
 }
 
 ul {
@@ -188,11 +214,8 @@ img {
 	}
 
 	.header .date {
-		margin: 1.5rem auto;
-		padding: 1.5rem 0;
-
+		margin-top: 2.5rem;
 		font-size: 1.8rem;
-
 		color: #fff;
 	}
 
@@ -202,7 +225,7 @@ img {
 	}
 
 	.header p {
-		margin: 1rem auto 3rem auto;
+		margin: 1.5rem auto;
 
 		text-align: center;
 
@@ -277,8 +300,8 @@ img {
 	.sponsors li,
 	.broughtoyouby li {
 		float: left;
-		width: 19%;
-		margin: 0.6%;
+		width: 17.6%;
+		margin: 1.5%;
 	}
 
 	.speakers li:first-child,
@@ -299,6 +322,7 @@ img {
 		.broughtoyouby li > img {
 			max-width: 100%;
 			margin: 0 auto;
+			border-radius: 50%;
 		}
 
 .speakers {
