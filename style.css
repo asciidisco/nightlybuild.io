@@ -137,7 +137,7 @@ img {
 	text-decoration: none;
 	text-align: center;
 
-	background-color: rgba(155, 219, 29, 0.8);
+	background-color: rgb(155, 219, 29);
 	color: #fff;
 }
 
@@ -422,7 +422,7 @@ pre .green {
 	left: 0;
 	right: 0;
 	width: 100vw;
-	height: 40rem;
+	height: 45rem;
 	margin-top: -4rem;
 
 	background: #9ebecd;
@@ -432,7 +432,7 @@ pre .green {
 		text-align: center;
 	}
 
-	.footer a {
+	.footer ul a {
 		color: #d70a59;
 	}
 
