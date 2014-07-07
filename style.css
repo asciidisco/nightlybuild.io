@@ -23,6 +23,22 @@
 	        box-sizing: border-box;
 }
 
+@media (min-width: 42em) {
+	h1,
+	h2,
+	h3,
+	h4,
+	p {
+		font-variant-ligatures: common-ligatures;
+		font-kerning: normal;
+		-webkit-font-variant-ligatures: common-ligatures;
+		-webkit-font-feature-settings: "kern";
+		   -moz-font-feature-settings: "kern";
+		        font-feature-settings: "kern";
+	}
+
+}
+
 body {
 	max-width: 100%;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
