@@ -95,7 +95,7 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				<img src="img/saal-querblick.jpg" alt="A cozy auditorium of the theatre">
 
 				<h3>Where?</h3>
-				<iframe class="location_osm" src="http://www.openstreetmap.org/export/embed.html?bbox=6.915518045425415%2C50.94911337171701%2C6.923736333847046%2C50.953067381059256&amp;layer=transportmap&amp;marker=50.95109041843519%2C6.9196271896362305" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/?mlat=50.95109&amp;mlon=6.91963#map=17/50.95109/6.91963&amp;layers=T">View Larger Map</a></small>
+				<div id="map" class="osm"></div>
 			</section>
 
 			<section class="sponsors" id="sponsors">
@@ -237,10 +237,46 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			data-dismiss="modal">×</a>
 		</section>
 
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script>
 			/* Analytics */
 
 			/* Custom Scripts */
+			'use strict';
+
+			// Load CSS async. Script adapted from https://github.com/filamentgroup/loadCSS/blob/master/loadCSS.js
+			function loadCSS (href, before, media) {
+				var styleSheet  = window.document.createElement('link');
+				var reference = before || window.document.getElementsByTagName('script')[0];
+
+				styleSheet.rel = "stylesheet";
+				styleSheet.href = href;
+				styleSheet.media = "only x";
+				reference.parentNode.insertBefore(styleSheet, reference);
+
+				setTimeout(
+					function () {
+						styleSheet.media = media || 'all';
+					}
+				);
+			}
+
+			loadCSS('http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css');
+		</script>
+		<script>
+			var map = L.map('map', {
+				center: [50.95109, 6.91963],
+				zoom: 13,
+				scrollWheelZoom: false,
+				doubleClickZoom: false
+			});
+
+			L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+				attribution: '&copy;<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="http://developer.mapquest.com/web/products/open/map">MapQuest</a>',
+				maxZoom: 18,
+			}).addTo(map);
+
+			var marker = L.marker([50.95109041843519, 6.9196271896362305]).addTo(map);
 		</script>
 	</body>
 </html>

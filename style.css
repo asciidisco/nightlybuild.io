@@ -376,6 +376,10 @@ pre .green {
 	min-height: 25rem;
 }
 
+.osm {
+	height: 25rem;
+}
+
 .sponsors {
 	color: #1e243e;
 }
