@@ -154,7 +154,7 @@ img {
 	text-align: center;
 
 	background-color: rgb(155, 219, 29);
-	color: #fff;
+	color: #000;
 }
 
 .button-tickets {
@@ -183,10 +183,11 @@ img {
 
 .big-button:hover .big-button_label {
 	background-color: #9bdb1d;
+	color: #000;
 }
 
 .big-button:hover .big-button_value {
-	color: #9bdb1d;
+	color: #000;
 }
 
 .header,
@@ -224,8 +225,8 @@ img {
 .logo:after {
 	content: '';
 	display: block;
-	width: 14rem;
-	height: 14rem;
+	width: 12rem;
+	height: 12rem;
 	margin: -4rem auto 0 auto;
 	padding: 0;
 
@@ -240,20 +241,24 @@ img {
 }
 
 .header .date {
-	margin-top: 2.5rem;
-	font-size: 1.4rem;
+	margin-top: 2rem;
+	font-size: 1.2rem;
 	color: #fff;
 }
 
 @media (min-width: 35em) {
 	.header .date {
-		font-size: 1.8rem;
+		font-size: 1.4em;
 	}
 }
 
 .header .summary {
-	max-width: 32rem;
-	font-size: 1.2rem;
+	margin: 2rem 0 0;
+	padding: 2rem 0;
+	border-top: thin solid #fff;
+	/*border-bottom: thin solid #fff;*/
+	font-size: 1.8rem;
+	font-family: 'Menlo';
 }
 
 .header p {
@@ -262,6 +267,10 @@ img {
 	text-align: center;
 
 	color: #fff;
+}
+
+.header .button {
+	margin: -1rem 0 1.5rem;
 }
 
 /* Hardfacts */
