@@ -20,10 +20,11 @@
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
-	        box-sizing: boder-box;
+	        box-sizing: border-box;
 }
 
 body {
+	max-width: 100%;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 	background: #1e243e; /* deep blue */
@@ -36,6 +37,7 @@ pre,
 h2,
 h3,
 .header .date,
+.big-button_label,
 .big-button_value,
 .font-primary {
 	font-family: 'Menlo', Monaco, monospace;
@@ -56,12 +58,11 @@ a,
 h1,
 h2 {
 	text-align: center;
-	color: white;
+	color: #fff;
 }
 
 h1 {
 	font-size: 3rem;
-	/*color: #e6143b; */ /* blue */
 	color: #9bdb1d; /* neon green */
 }
 
@@ -120,6 +121,7 @@ img {
 	}
 }
 
+/* Button styles */
 .button {
 	text-align: center;
 }
@@ -127,25 +129,31 @@ img {
 .big-button {
 	display: inline-block;
 	margin: 1rem auto;
+	padding: 0 2rem;
+	clear: both;
+
 	font-size: 1.2rem;
 	line-height: 3.5rem;
-	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
 
-	clear: both;
+	background-color: rgba(155, 219, 29, 0.8);
+	color: #fff;
 }
 
-.big-button_label {
+.button-tickets {
+	padding: 0;
+}
+
+.button-tickets .big-button_label {
 	float: left;
 	padding: 0 1.7rem;
 	color: #fff;
-	background-color: rgba(155,219,29,0.8);
+	background-color: rgba(155, 219, 29, 0.8);
 }
 
-.big-button_value {
+.button-tickets .big-button_value {
 	float: left;
-	margin-left: 1px;
 	padding: 0 1.2rem;
 	font-size: 1.2em;
 	color: #006375;
@@ -169,6 +177,7 @@ img {
 	line-height: 1.4;
 }
 
+/* Header */
 .header:before {
 	content: '';
 	display: block;
@@ -187,107 +196,114 @@ img {
 	animation: fade-in-from-bw 10s forwards;
 }
 
-.header {
-
+.logo {
+	text-indent: -999em;
 }
 
-	.logo {
-		text-indent: -999em;
-	}
+.logo:after {
+	content: '';
+	display: block;
+	width: 14rem;
+	height: 14rem;
+	margin: -4rem auto 0 auto;
+	padding: 0;
 
-	.logo:after {
-		content: '';
-		display: block;
-		width: 14rem;
-		height: 14rem;
-		margin: -4rem auto 0 auto;
-		padding: 0;
+	text-indent: 0;
 
-		text-indent: 0;
+	background: url('img/logo.png');
+	background-size: 100%;
+}
 
-		background: url('img/logo.png');
-		background-size: 100%;
-	}
+.header h1 {
+	margin: 3rem auto 0;
+}
 
-	.header h1 {
-		margin: 3rem auto 0 auto;
-	}
+.header .date {
+	margin-top: 2.5rem;
+	font-size: 1.4rem;
+	color: #fff;
+}
 
+@media (min-width: 35em) {
 	.header .date {
-		margin-top: 2.5rem;
 		font-size: 1.8rem;
-		color: #fff;
 	}
-
-	.header .summary {
-		max-width: 32rem;
-		font-size: 1.2rem;
-	}
-
-	.header p {
-		margin: 1.5rem auto;
-
-		text-align: center;
-
-		color: #9ebecd;
-	}
-
-/* Terminal style */
-.hardfacts {
-
 }
 
+.header .summary {
+	max-width: 32rem;
+	font-size: 1.2rem;
+}
+
+.header p {
+	margin: 1.5rem auto;
+
+	text-align: center;
+
+	color: #9ebecd;
+}
+
+/* Hardfacts */
+/* Terminal style */
+pre {
+	padding: 0.25rem 1rem;
+
+	font-size: 0.75rem;
+	line-height: 1.2;
+
+	background: #000;
+	color: #ddd;
+	cursor: text;
+}
+
+@media (min-width: 35em) {
 	pre {
-		padding: 0.25rem 1rem;
 		font-size: 1rem;
-		line-height: 1.2;
-
-		background: #000;
-		color: #ddd;
-		cursor: text;
 	}
+}
 
-	.terminal {
-		position: relative;
-		padding-top: 3rem;
-	}
+.terminal {
+	position: relative;
+	padding-top: 3rem;
+	overflow: auto;
+}
 
-	.terminal:before {
-		content: 'nightlybuild.io';
-		display: block;
-		position: absolute;
-		top: 0;
-		left: -1px;
-		right: -1px;
-		height: 1.8rem;
+.terminal:before {
+	content: 'nightlybuild.io';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -1px;
+	right: -1px;
+	height: 1.8rem;
 
-		font-family: 'Lucida Grande', sans-serif;
-		font-size: 0.75rem;
-		line-height: 1.8rem;
-		text-align: center;
+	font-family: 'Lucida Grande', sans-serif;
+	font-size: 0.75rem;
+	line-height: 1.8rem;
+	text-align: center;
 
-		background: #ccc;
-		background-image: -webkit-linear-gradient(top, #ddd, #aaa);
-		background-image:    -moz-linear-gradient(top, #ddd, #aaa);
-		background-image:         linear-gradient(top, #ddd, #aaa);
-		color: #3A3A53;
-		text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.4);
+	background: #ccc;
+	background-image: -webkit-linear-gradient(top, #ddd, #aaa);
+	background-image:    -moz-linear-gradient(top, #ddd, #aaa);
+	background-image:         linear-gradient(top, #ddd, #aaa);
+	color: #3A3A53;
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.4);
 
-		border: 1px solid hsla(0, 0%, 43%, 0.3);
-		border-radius: 0.3125rem 0.3125rem 0 0;
-	}
+	border: 1px solid hsla(0, 0%, 43%, 0.3);
+	border-radius: 0.3125rem 0.3125rem 0 0;
+}
 
-	pre .command-prompt {
-		color: #0188e1;
-	}
+pre .command-prompt {
+	color: #0188e1;
+}
 
-	pre .command-task {
-		color: #d70a59;
-	}
+pre .command-task {
+	color: #d70a59;
+}
 
-	pre .green {
-		color: #9bdb1d; /* neon green */
-	}
+pre .green {
+	color: #9bdb1d; /* neon green */
+}
 
 .speakers ul,
 .sponsors ul,
@@ -317,16 +333,20 @@ img {
 	}
 }
 
-		.speakers li > img,
-		.sponsors li img,
-		.broughtoyouby li > img {
-			max-width: 100%;
-			margin: 0 auto;
-			border-radius: 50%;
-		}
+	.speakers li > img,
+	.sponsors li img,
+	.broughtoyouby li > img {
+		margin: 0 auto;
+		border-radius: 50%;
+	}
 
-.speakers {
+.speakers li {
+	text-align: center;
+}
 
+.speakers li > h3,
+.speakers li > p {
+	text-align: left;
 }
 
 .location {
@@ -334,7 +354,7 @@ img {
 	background-size: cover;
 }
 
-.location iframe {
+.location_osm {
 	width: 100%;
 	height: auto;
 	min-height: 25rem;
@@ -352,8 +372,6 @@ img {
 	}
 
 	.sponsors li {
-		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
 		padding: 0.25rem;
 
 		font-size: 0.75rem;
@@ -361,8 +379,10 @@ img {
 		background: #fff;
 	}
 
-	.sponsors img {
-		min-height: 12rem;
+	@media (min-width: 60em) {
+		.sponsors img {
+			min-height: 10rem;
+		}
 	}
 
 .schedule table {
@@ -412,34 +432,25 @@ img {
 		text-align: center;
 	}
 
-	.broughtoyouby {
-
-	}
-
 	.footer a {
 		color: #d70a59;
 	}
 
-		.broughtoyouby li > img {
-			max-width: 100%;
-			height: auto;
-
-			border-radius: 50%;
-		}
-
 .footer .twitter-follow-button {
+	display: block;
 	margin: 0 auto;
-	text-align: center;
 }
 
-.modal-tickets {
+.modal-tickets,
+.modal-afterparty {
 	display: none;
 	padding: 1rem;
 
 	color: #00161d;
 }
 
-	.modal-tickets:target {
+	.modal-tickets:target,
+	.modal-afterparty:target {
 		display: block;
 		position: fixed;
 		top: 25vh;
@@ -462,6 +473,7 @@ img {
 		text-decoration: none;
 	}
 
-		.modal-tickets:target .modal-close {
+		.modal-tickets:target .modal-close,
+		.modal-afterparty:target .modal-close {
 			display: block;
 		}
