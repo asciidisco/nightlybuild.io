@@ -3,16 +3,21 @@
 	<head>
 		<title>NightlyBuild.io - 26th September 2014, Cologne</title>
 
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="description" content="A hand-crafted after work event for web enthusiasts loving technology, design and inspiration in Cologne, Germany">
+		<meta charset="utf-8">
+		<meta name="description" content="A hand-crafted after work event for
+				web enthusiasts loving technology, design and inspiration in
+				Cologne, Germany">
 
-		<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 		<link rel="dns-prefetch" href="//nightlybuild.io">
 
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/3.0.1/normalize.min.css">
+		<link rel="stylesheet" href="vendor/normalize.css">
+		<link rel="stylesheet" href="vendor/modal.css">
 		<link rel="stylesheet" href="style.css">
+
 		<script>document.createElement('picture');</script>
-		<script type="text/javascript">
+
+		<!-- Font loader -->
+		<script>
 			WebFontConfig = {
 				google: {
 					families: [ 'Oswald:700,400,300:latin' ]
@@ -28,11 +33,13 @@
 				s.parentNode.insertBefore(wf, s);
 			})();
 		</script>
+
 	</head>
 	<body>
 		<header class="header" id="top">
 			<h1 class="logo">Nightlybuild.io</h1>
 			<p class="date"><time datetime="2014-09-26">September, 26th 2014<br>6:30 - 11 p.m.</time></p>
+
 			<p class="summary">A hand-crafted after work conference for web enthusiasts loving technology, design and inspiration <br><a href="http://www.openstreetmap.org/node/333609209#map=17/50.95109/6.92097&layers=T" target="_blank">in Cologne, Germany</a>.</p>
 
 			<p class="button">
@@ -227,11 +234,13 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			</section>
 		</footer>
 
-		<section class="semantic-content modal-tickets" id="tickets" tabindex="-1"
+		<section class="modal--show modal-tickets" id="tickets" tabindex="-1"
 		role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
 			<div class="modal-inner">
-				<header id="modal-label">Buy your Ticket for Nightlybuild.io</header>
+				<header id="modal-label">
+					<h3>Buy your Ticket for Nightlybuild.io</h3>
+				</header>
 				<div class="modal-content"><p>Sorry, Tickets are not yet available. Please check again soon and follow updates <a href="https://twitter.com/nightlybuildio">on Twitter</a>.</p></div>
 			</div>
 
@@ -239,11 +248,13 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			data-dismiss="modal">×</a>
 		</section>
 
-		<section class="semantic-content modal-afterparty" id="afterparty" tabindex="-1"
+		<section class="modal--show modal-afterparty" id="afterparty" tabindex="-1"
 		role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
 			<div class="modal-inner">
-				<header id="modal-label">After Party</header>
+				<header id="modal-label">
+					<h3>After Party</h3>
+				</header>
 				<div class="modal-content">
 					<!-- <iframe src="#maphere"></iframe> -->
 				</div>
@@ -254,45 +265,7 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 		</section>
 
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-		<script>
-			/* Analytics */
-
-			/* Custom Scripts */
-			'use strict';
-
-			// Load CSS async. Script adapted from https://github.com/filamentgroup/loadCSS/blob/master/loadCSS.js
-			function loadCSS (href, before, media) {
-				var styleSheet  = window.document.createElement('link');
-				var reference = before || window.document.getElementsByTagName('script')[0];
-
-				styleSheet.rel = "stylesheet";
-				styleSheet.href = href;
-				styleSheet.media = "only x";
-				reference.parentNode.insertBefore(styleSheet, reference);
-
-				setTimeout(
-					function () {
-						styleSheet.media = media || 'all';
-					}
-				);
-			}
-
-			loadCSS('http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css');
-		</script>
-		<script>
-			var map = L.map('map', {
-				center: [50.95109, 6.91963],
-				zoom: 13,
-				scrollWheelZoom: false,
-				doubleClickZoom: false
-			});
-
-			L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-				attribution: '&copy;<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="http://developer.mapquest.com/web/products/open/map">MapQuest</a>',
-				maxZoom: 18,
-			}).addTo(map);
-
-			var marker = L.marker([50.95109041843519, 6.9196271896362305]).addTo(map);
-		</script>
+		<script src="vendor/modal.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
