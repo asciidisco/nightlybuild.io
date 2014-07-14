@@ -33,4 +33,26 @@
 	}).addTo(map);
 
 	L.marker([50.95109041843519, 6.9196271896362305]).addTo(map);
+
+	/**
+	 * Gallery
+	 */
+	document.querySelector('.gallery-images').addEventListener('click', function (event) {
+		var image;
+		event.preventDefault();
+
+		document.querySelector('.gallery-image-image').innerHTML = '';
+
+		if (event.target && event.target.nodeName === 'IMG') {
+
+			image = event.target;
+
+			document.querySelector('.gallery-image-image').innerHTML = '<img src="' + image.getAttribute('data-image') + '" alt="' + image.getAttribute('src') + '" style="opacity: 0">';
+
+			// Use load event
+			setTimeout(function () {
+				document.querySelector('.gallery-image-image img').style.opacity = 1;
+			}, 200);
+		}
+	}, false);
 }());
