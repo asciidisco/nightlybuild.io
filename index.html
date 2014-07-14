@@ -86,11 +86,23 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					<li>
 						<img src="img/speakers/nico-hagenburger.jpeg">
 						<h3><a href="https://twitter.com/Hagenburger">Nico <br>Hagenburger</a></h3>
+						<p><a href="https://twitter.com/Hagenburger"
+							class="twitter-follow-button"
+							data-show-count="false"
+							data-lang="en"
+							data-dnt="true"
+							data-align="center">@Hagenburger</a></p>
 						<p>Nico is collecting subway trains. Besides that, he’s working on Sass, living style guides and making things pretty.</p>
 					</li>
 					<li>
 						<img src="img/speakers/ian-feather.jpeg">
 						<h3><a href="https://twitter.com/ianfeather">Ian <br>Feather</a></h3>
+						<p><a href="https://twitter.com/ianfeather"
+							class="twitter-follow-button"
+							data-show-count="false"
+							data-lang="en"
+							data-dnt="true"
+							data-align="center">@ianfeather</a></p>
 						<p>Front End Ops, Client Side Technical Lead at Lonely Planet.</p>
 					</li>
 					<li>
@@ -111,14 +123,16 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				</ul>
 			</section>
 
-			<section class="location" data-background="img/buehne.jpg" id="location">
-				<h2>Location</h2>
-				<p>The event will be held at the <a href="http://www.k-k-t.de/de/index.php">Kölner Künstler Theater</a> in central Cologne, Germany. The nice little theatre with its café will host you during the conference and let you enjoy the evening with all other attendees.</p>
-				<img src="img/theatersaal.jpg" alt="View to the conference stage from the audience">
-				<img src="img/saal-querblick.jpg" alt="A cozy auditorium of the theatre">
+			<section class="location" id="location">
+				<div class="location__inner">
+					<h2>Location</h2>
+					<p>The event will be held at the <a href="http://www.k-k-t.de/de/index.php">Kölner Künstler Theater</a> in central Cologne, Germany. The nice little theatre with its café will host you during the conference and let you enjoy the evening with all other attendees.</p>
+					<img src="img/theatersaal.jpg" alt="View to the conference stage from the audience">
+					<img src="img/saal-querblick.jpg" alt="A cozy auditorium of the theatre">
 
-				<h3>Where?</h3>
-				<div id="map" class="osm"></div>
+					<h3>Where?</h3>
+					<div id="map" class="osm"></div>
+				</div>
 			</section>
 
 			<section class="sponsors" id="sponsors">
@@ -227,10 +241,17 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					</li>
 				</ul>
 
-				<a href="https://twitter.com/nightlybuildio" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large" data-dnt="true" data-align="center">Follow @nightlybuildio</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<a href="https://twitter.com/nightlybuildio"
+					class="twitter-follow-button"
+					data-show-count="false"
+					data-lang="en"
+					data-size="large"
+					data-dnt="true"
+					data-align="center">Follow @nightlybuildio</a>
 
 				<p class="button"><a class="big-button" href="mailto:hello@nightlybuild.io">E-Mail us</a></p>
+
+				<p><a href="#legal">Legal Notice</a></p>
 			</section>
 		</footer>
 
@@ -264,8 +285,44 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			data-dismiss="modal">×</a>
 		</section>
 
+		<section class="modal--show" id="legal" tabindex="-1" role="dialog"
+				aria-labelledby="modal-label-legal" aria-hidden="true">
+
+			<div class="modal-inner">
+				<header id="modal-label-legal">
+					<h3>Legal Notice</h3>
+				</header>
+				<div class="modal-content">
+					<p><b>Hans Christian Reinl</b><br>
+					Obere Bachstraße 15<br>
+					35606 Solms<br>
+					Germany</p>
+
+					<p><strong>Contact</strong><br>
+					Hans Christian Reinl<br>
+					info@drublic.de</p>
+
+					<p>Finanzamt Wetzlar<br>
+					Ust-IdNr.: DE288406427</p>
+
+					<p><strong>Some things…</strong><br>
+					There is no warranty for integrity, completeness and currentness for this website.<br>
+					Furthermore Hans Christian Reinl doesn't take any liability concerning external links.<br>
+					Please notice the copyright law for each of the presented pages.<br>
+					Please be aware of the fact that we store some of the data while you visit this this page. For doing this we use Google Analytics.</p>
+				</div>
+			</div>
+
+			<a href="#!" class="modal-close"
+				title="Close the after party information modal"
+				data-close="Close"
+				data-dismiss="modal">×</a>
+		</section>
+
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script src="vendor/modal.js"></script>
 		<script src="main.js"></script>
+
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</body>
 </html>

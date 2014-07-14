@@ -123,10 +123,16 @@ h2:after {
 
 h3 {
 	font-weight: normal;
+	font-size: 2em;
 }
 
 h3 a {
 	text-decoration: none;
+}
+
+h4 {
+	font-weight: normal;
+	font-size: 1.25em;
 }
 
 ul {
@@ -138,16 +144,12 @@ img {
 	height: auto;
 }
 
-@keyframes fade-in-from-bw {
+@-webkit-keyframes rolloutlinetoright {
 	from {
-		-webkit-filter: grayscale(100%);
-		   -moz-filter: grayscale(100%);
-		        filter: grayscale(100%);
+		width: 0;
 	}
 	to {
-		-webkit-filter: grayscale(0%);
-		   -moz-filter: grayscale(0%);
-		        filter: grayscale(0%);
+		width: 100%;
 	}
 }
 
@@ -168,10 +170,10 @@ img {
 .big-button {
 	display: inline-block;
 	margin: 1rem auto;
-	padding: 0 2rem;
+	padding: 0 2.5rem;
 	clear: both;
 
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	line-height: 3.5rem;
 	text-decoration: none;
 	text-align: center;
@@ -214,8 +216,12 @@ img {
 }
 
 .header,
-.main,
-.footer {
+.hardfacts,
+.speakers,
+.sponsors,
+.location__inner,
+.schedule,
+.broughtoyouby {
 	margin: 0 auto;
 	max-width: 60rem;
 
@@ -234,11 +240,7 @@ img {
 	height: 100vh;
 
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75)), url('img/header.jpg');
-
-	-webkit-filter: grayscale(80%);
-	        filter: grayscale(80%);
-
-	animation: fade-in-from-bw 10s forwards;
+	background-size: cover;
 }
 
 .logo {
@@ -256,7 +258,7 @@ img {
 	text-indent: 0;
 
 	background: url('img/logo.png');
-	background-size: 100%;
+	background-size: cover;
 }
 
 .header h1 {
@@ -278,7 +280,7 @@ img {
 .header .summary {
 	max-width: 42rem;
 	margin: 2rem auto 0;
-	padding: 2rem 0;
+	padding: 3rem 0;
 
 	font-size: 2rem;
 }
@@ -293,6 +295,7 @@ img {
 	height: 1px;
 
 	background: #fff;
+	-webkit-animation: rolloutlinetoright 5s forwards;
 	animation: rolloutlinetoright 5s forwards;
 }
 
@@ -376,6 +379,15 @@ pre .green {
 	list-style: none;
 }
 
+.speakers {
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+.speakers h3 {
+	font-size: 1.25em;
+}
+
 @media (min-width: 42em) {
 	.speakers li,
 	.sponsors li,
@@ -415,8 +427,24 @@ pre .green {
 }
 
 .location {
-	background: attr('data-background');
-	background-size: cover;
+	position: relative;
+	background: #004653;
+}
+
+.location:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 10em;
+	background: #00161d;
+}
+
+.location__inner {
+	position: relative;
+	z-index: 10;
+	padding-top: 3em;
 }
 
 .location_osm {
@@ -431,6 +459,7 @@ pre .green {
 
 .sponsors {
 	color: #1e243e;
+	padding-top: 3em;
 }
 
 	.sponsors ul {
@@ -453,6 +482,10 @@ pre .green {
 			min-height: 10rem;
 		}
 	}
+
+.schedule {
+	padding-top: 3em;
+}
 
 .schedule table {
 	border: 0;
@@ -478,31 +511,17 @@ pre .green {
 .footer {
 	margin: 10rem auto 0;
 	padding: 1rem 0;
-
-	border-top: thin solid #0188e1;
-
-	color: #1e243e;
-}
-
-.footer:before {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	right: 0;
-	width: 100vw;
-	height: 45rem;
-	margin-top: -4rem;
-
-	background: #9ebecd;
+	background: #004653;
+	color: #fff;
 }
 
 	.footer h4 {
 		text-align: center;
 	}
 
-	.footer ul a {
-		color: #d70a59;
+	.footer p {
+		font-size: 0.8em;
+		text-align: center;
 	}
 
 .footer .twitter-follow-button {
