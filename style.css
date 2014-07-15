@@ -245,7 +245,7 @@ img {
 .sponsors,
 .location__inner,
 .schedule,
-.team {
+.footer__inner {
 	margin: 0 auto;
 	max-width: 60rem;
 
@@ -424,31 +424,6 @@ pre .green {
 	padding-bottom: 3em;
 }
 
-@media (min-width: 42em) {
-	.team li {
-		float: left;
-		width: 17.6%;
-		margin: 1.5%;
-	}
-
-	.team li:first-child {
-		margin-left: 0;
-	}
-
-	.team li:last-child {
-		margin-right: 0;
-	}
-}
-
-.speakers li {
-	text-align: center;
-}
-
-.speakers li > h3,
-.speakers li > p {
-	text-align: left;
-}
-
 /**
  * Location
  */
@@ -472,7 +447,7 @@ pre .green {
 	padding-top: 3em;
 }
 
-.location_osm {
+.location__osm {
 	width: 100%;
 	height: auto;
 	min-height: 25rem;
@@ -490,6 +465,7 @@ pre .green {
 	display: table;
 	margin: 0 -0.5rem;
 	color: #1e243e;
+	text-align: center;
 }
 
 .cards li {
@@ -566,70 +542,31 @@ pre .green {
 			margin: 0;
 		}
 
+/**
+ * Footer
+ */
 .footer {
 	margin: 10rem auto 0;
 	padding: 1rem 0;
+	text-align: center;
 }
 
-	.footer h4 {
-		text-align: center;
-	}
-
 	.footer p {
-		font-size: 0.8em;
-		text-align: center;
-	}
-
-	.team ul {
-		list-style: none;
-		overflow: hidden;
-
-		vertical-align: top;
-	}
-
-	.team li > img {
-		display: inline-block;
-		max-width: 30%;
-		margin: 0.75rem 3%;
-		border-radius: 50%;
-	}
-
-	.team li > p {
-		display: inline-block;
-		max-width: 55%;
-
-		vertical-align: top;
-		text-align: left;
-	}
-
-	@media (min-width: 27.5em) {
-		.team li > img {
-			vertical-align: middle;
-		}
-
-		.team li > p {
-			vertical-align: middle;
-		}
-	}
-
-	@media (min-width: 27.5em) {
-		.team li > img {
-			display: block;
-			max-width: 100%;
-			margin: 0;
-		}
-
-		.team li > p {
-			display: block;
-			max-width: 100%;
-			margin: 1rem 0;
-			text-align: center;
-		}
+		font-size: 0.75rem;
 	}
 
 	.footer .twitter-follow-button {
 		display: block;
 		margin: 0 auto;
+	}
+
+.team {
+	margin-bottom: 3rem;
+	font-size: 0.8em;
+}
+
+	.team li {
+		border-color: #004653;
 	}
 
 /**
