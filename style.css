@@ -6,16 +6,9 @@
  *
  */
 
-.clearfix:before,
-.clearfix:after {
-	content: ' ';
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
+/**
+ * Box Sizing
+ */
 *,
 *:before,
 *:after {
@@ -24,17 +17,13 @@
 }
 
 @media (min-width: 42em) {
-	h1,
-	h2,
-	h3,
-	h4,
-	p {
+	body {
 		font-variant-ligatures: common-ligatures;
 		font-kerning: normal;
 		-webkit-font-variant-ligatures: common-ligatures;
-		-webkit-font-feature-settings: "kern";
-		   -moz-font-feature-settings: "kern";
-		        font-feature-settings: "kern";
+		-webkit-font-feature-settings: 'kern';
+		   -moz-font-feature-settings: 'kern';
+		        font-feature-settings: 'kern';
 	}
 
 }
@@ -43,8 +32,7 @@ body {
 	max-width: 100%;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-	background: #1e243e; /* deep blue */
-	background: #00161d; /* greenish black */
+	background: #00161d;
 	color: #fff;
 }
 
@@ -257,7 +245,7 @@ img {
 .sponsors,
 .location__inner,
 .schedule,
-.broughtoyouby {
+.team {
 	margin: 0 auto;
 	max-width: 60rem;
 
@@ -431,50 +419,26 @@ pre .green {
 /**
  * Speakers
  */
-.speakers ul,
-.sponsors ul,
-.broughtoyouby ul {
-	list-style: none;
-	overflow: hidden;
-}
-
 .speakers {
 	padding-top: 2em;
 	padding-bottom: 3em;
 }
 
-.speakers h3 {
-	font-size: 1.25em;
-}
-
 @media (min-width: 42em) {
-	.speakers li,
-	.sponsors li,
-	.broughtoyouby li {
+	.team li {
 		float: left;
 		width: 17.6%;
 		margin: 1.5%;
 	}
 
-	.speakers li:first-child,
-	.sponsors li:first-child,
-	.broughtoyouby li:first-child {
+	.team li:first-child {
 		margin-left: 0;
 	}
 
-	.speakers li:last-child,
-	.sponsors li:last-child,
-	.broughtoyouby li:last-child {
+	.team li:last-child {
 		margin-right: 0;
 	}
 }
-
-	.speakers li > img,
-	.sponsors li img,
-	.broughtoyouby li > img {
-		margin: 0 auto;
-		border-radius: 50%;
-	}
 
 .speakers li {
 	text-align: center;
@@ -518,6 +482,54 @@ pre .green {
 	height: 25rem;
 }
 
+/**
+ * Cards
+ */
+.cards {
+	list-style: none;
+	display: table;
+	margin: 0 -0.5rem;
+	color: #1e243e;
+}
+
+.cards li {
+	display: table-cell;
+	width: 20%;
+	padding: 0.25rem;
+	background: #fff;
+	vertical-align: top;
+	font-size: 0.75rem;
+	border: 0.5rem solid #00161d;
+	border-width: 0 0.5rem;
+}
+
+.cards a {
+	color: #004653;
+}
+
+.cards img {
+	display: block;
+	border-radius: 50%;
+}
+
+@media (min-width: 60em) {
+	.cards img {
+		min-height: 10rem;
+	}
+}
+
+.cards h3 {
+	margin: 0.5rem;
+	font-size: 1.25rem;
+}
+
+.cards h3 a {
+	display: block;
+}
+
+.cards p {
+	margin: 0.5rem;
+}
 
 /**
  * Sponsors
@@ -526,26 +538,9 @@ pre .green {
 	padding-top: 3em;
 }
 
-	.sponsors ul {
-		max-width: 100%;
-		margin: 0 auto;
-		color: #1e243e;
-	}
-
-	.sponsors li {
-		padding: 0.25rem;
-
-		font-size: 0.75rem;
-
-		background: #fff;
-	}
-
-	@media (min-width: 60em) {
-		.sponsors img {
-			min-height: 10rem;
-		}
-	}
-
+/**
+ * Schedule
+ */
 .schedule {
 	padding-top: 3em;
 }
@@ -585,15 +580,21 @@ pre .green {
 		text-align: center;
 	}
 
-	.broughtoyouby li > img {
-		display: inline-block;
-		max-width: 30%;
-		margin: 0.75rem 3%;
+	.team ul {
+		list-style: none;
+		overflow: hidden;
 
 		vertical-align: top;
 	}
 
-	.broughtoyouby li > p {
+	.team li > img {
+		display: inline-block;
+		max-width: 30%;
+		margin: 0.75rem 3%;
+		border-radius: 50%;
+	}
+
+	.team li > p {
 		display: inline-block;
 		max-width: 55%;
 
@@ -602,23 +603,23 @@ pre .green {
 	}
 
 	@media (min-width: 27.5em) {
-		.broughtoyouby li > img {
+		.team li > img {
 			vertical-align: middle;
 		}
 
-		.broughtoyouby li > p {
+		.team li > p {
 			vertical-align: middle;
 		}
 	}
 
 	@media (min-width: 27.5em) {
-		.broughtoyouby li > img {
+		.team li > img {
 			display: block;
 			max-width: 100%;
 			margin: 0;
 		}
 
-		.broughtoyouby li > p {
+		.team li > p {
 			display: block;
 			max-width: 100%;
 			margin: 1rem 0;
