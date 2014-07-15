@@ -524,10 +524,51 @@ pre .green {
 		text-align: center;
 	}
 
-.footer .twitter-follow-button {
-	display: block;
-	margin: 0 auto;
-}
+	.broughtoyouby li > img {
+		display: inline-block;
+		max-width: 30%;
+		margin: 0.75rem 3%;
+
+		vertical-align: top;
+	}
+
+	.broughtoyouby li > p {
+		display: inline-block;
+		max-width: 55%;
+
+		vertical-align: top;
+		text-align: left;
+	}
+
+	@media (min-width: 27.5em) {
+		.broughtoyouby li > img {
+			vertical-align: middle;
+		}
+
+		.broughtoyouby li > p {
+			vertical-align: middle;
+		}
+	}
+
+	@media (min-width: 27.5em) {
+		.broughtoyouby li > img {
+			display: block;
+			max-width: 100%;
+			margin: 0;
+		}
+
+		.broughtoyouby li > p {
+			display: block;
+			max-width: 100%;
+			margin: 1rem 0;
+			text-align: center;
+		}
+	}
+
+	.footer .twitter-follow-button {
+		display: block;
+		margin: 0 auto;
+	}
 
 /**
  * Gallery
