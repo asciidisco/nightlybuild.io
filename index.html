@@ -15,8 +15,6 @@
 		<link rel="stylesheet" href="vendor/loader.css">
 		<link rel="stylesheet" href="style.css">
 
-		<script>document.createElement('picture');</script>
-
 		<!-- Font loader -->
 		<script>
 			WebFontConfig = {
@@ -38,16 +36,27 @@
 	</head>
 	<body>
 		<header class="header" id="top">
-			<h1 class="logo">Nightlybuild.io</h1>
-			<p class="date"><time datetime="2014-09-26">September, 26th 2014<br>6:30 - 11 p.m.</time></p>
+			<h1 class="header__logo">Nightlybuild.io</h1>
+			<p class="header__date">
+				<time datetime="2014-09-26">September, 26th 2014<br>6:30 &ndash; 11 p.m.</time>
+			</p>
 
-			<p class="summary">A hand-crafted after work conference for web enthusiasts loving technology, design and inspiration <br><a href="http://www.openstreetmap.org/node/333609209#map=17/50.95109/6.92097&layers=T" target="_blank">in Cologne, Germany</a>.</p>
+			<p class="header__summary">A hand-crafted after work conference for
+				web enthusiasts loving technology, design and inspiration<br>
+				<a href="http://www.openstreetmap.org/node/333609209#map=17/50.95109/6.92097&layers=T"
+						target="_blank">in Cologne, Germany</a>.</p>
 
-			<p class="button">
-				<a class="big-button button-tickets" href="#tickets">
-					<span class="big-button_label">Buy your ticket</span><span class="big-button_value">35€</span>
+			<p>
+				<a href="#tickets"
+						class="button button--big button--tickets"
+						data-ga-category="Ticket"
+						data-ga-action="Ticket - Top">
+					<span class="button__label">Buy Your Ticket</span>
+					<span class="button__value">35€</span>
 				</a>
 			</p>
+
+			<div class="header__background" data-scroll-top></div>
 		</header>
 
 		<main role="main" class="main">
@@ -74,16 +83,15 @@ Uncompressed size: <span class="green">35</span> €.
 Compressed size: <span class="green">Drinks</span> included (<span class="green">Knowledge</span> gzipped).
 
 <span class="command-prompt">Done, without errors.</span>
-<span class="command-prompt active"><span class="active-prompt"></span></span>
+<span class="command-prompt"><span class="green">>></span><span class="active-prompt"></span></span>
 </pre>
 			</section>
 
 			<section class="speakers" id="speakers">
-				<h2><span>Speakers</span></h2>
-
+				<h2>Speakers</h2>
 				<p>We will have five high-level speakers for you at the conference entertaining you this evening.</p>
 
-				<ul class="clearfix">
+				<ul>
 					<li>
 						<img src="img/speakers/nico-hagenburger.jpeg">
 						<h3><a href="https://twitter.com/Hagenburger">Nico <br>Hagenburger</a></h3>
@@ -130,16 +138,18 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					<p>The event will be held at the <a href="http://www.k-k-t.de/de/index.php">Kölner Künstler Theater</a> in central Cologne, Germany. The nice little theatre with its café will host you during the conference and let you enjoy the evening with all other attendees.</p>
 
 					<div class="gallery">
-						<div class="gallery-image">
+						<div class="gallery__image">
 							<div class="spinner">
 								<div class="spinner__outer"></div>
 								<div class="spinner__inner"></div>
 							</div>
-							<div class="gallery-image-image">
+
+							<div class="gallery__image__image">
 								<img src="img/theatersaal.jpg" alt="View to the conference stage from the audience">
 							</div>
 						</div>
-						<ul class="gallery-images">
+
+						<ul class="gallery__images">
 							<li>
 								<a href="#">
 									<img src="img/theatersaal.jpg" data-image="img/theatersaal.jpg" alt="View to the conference stage from the audience">
@@ -147,43 +157,36 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 							</li>
 							<li>
 								<a href="#">
-									<img src="img/saal-querblick.jpg" data-image="img/theatersaal.jpg" alt="A cozy auditorium of the theatre">
+									<img src="img/saal-querblick.jpg" data-image="img/saal-querblick.jpg" alt="A cozy auditorium of the theatre">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="img/theatersaal.jpg" data-image="img/theatersaal.jpg" alt="View to the conference stage from the audience">
+									<img src="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" data-image="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" alt="View to the conference stage from the audience">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="img/saal-querblick.jpg" data-image="img/theatersaal.jpg" alt="A cozy auditorium of the theatre">
+									<img src="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" data-image="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" alt="A cozy auditorium of the theatre">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="img/theatersaal.jpg" data-image="img/theatersaal.jpg" alt="View to the conference stage from the audience">
+									<img src="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" data-image="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" alt="View to the conference stage from the audience">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="img/saal-querblick.jpg" data-image="img/theatersaal.jpg" alt="A cozy auditorium of the theatre">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="img/theatersaal.jpg" data-image="img/theatersaal.jpg" alt="View to the conference stage from the audience">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="img/saal-querblick.jpg" data-image="img/theatersaal.jpg" alt="A cozy auditorium of the theatre">
+									<img src="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" data-image="http://dummyimage.com/600x338/fff/111111.png&text=more+to+come" alt="A cozy auditorium of the theatre">
 								</a>
 							</li>
 						</ul>
 					</div>
 
-					<h3>Where?</h3>
+					<h3>How to find the venue</h3>
+					<p>The venue is located in the center of Cologne Ehrenfeld, one of neighbourhoods where the youth likes to meet with a lot of small cafés, bars, restaurants and clubs.</p>
+					<p>You can find the Kölner Künstler Theater in Grüner Weg 5, 50825 Köln-Ehrenfeld. Find a map below. If you are coming by public transit you can take the S12 and S13 from Cologne Central Station, track 11, to Köln Ehrenfeld (two stops) and then walk 700 meter to the venue. Please make sure to buy a ticket for about 2,40 Euro. The ride and walk takes about 15 minutes, a train leaves every 10 minutes.</p>
+
 					<div id="map" class="osm"></div>
 				</div>
 			</section>
@@ -191,7 +194,9 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			<section class="sponsors" id="sponsors">
 				<h2>Sponsors</h2>
 
-				<ul class="clearfix">
+				<p>We are very thankful to everyone who helps us with the event – especially our sponsors for poviding money to keep the admission price that low.</p>
+
+				<ul>
 					<li>
 						<a href="http://www.denkwerk.com/" target="_blank"><img src="img/sponsors/denkwerk.svg"></a>
 						<p><strong>Denkwerk</strong>, Agentur in Köln</p>
@@ -214,11 +219,13 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					</li>
 				</ul>
 
-				<p class="button"><a class="big-button" href="#sponsoring">Become a Sponsor</a></p>
+				<p><a class="button" href="#sponsoring">Become a Sponsor</a></p>
 			</section>
 
 			<section class="schedule" id="schedule">
 				<h2>Schedule</h2>
+
+				<p>The shedule will be announced pretty soon. Stay tuned.</p>
 
 				<table>
 					<tr>
@@ -269,9 +276,9 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 
 		<footer class="footer" id="team">
 			<section class="broughtoyouby">
-				<h4>This event is brought to you by:</h4>
+				<h4>This event is brought to you by these people</h4>
 
-				<ul class="clearfix">
+				<ul>
 					<li>
 						<img src="img/team/sebastian.png">
 						<p>Nerdy talking, JavaScript coding, arduino wiring Interwebs Dude. Emperor of <a href="http://dalekjs.com/">dalekjs</a>, Co-Curator of <a href="http://www.enterjs.de/">enterjsconf</a>.</p>
@@ -302,9 +309,9 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					data-dnt="true"
 					data-align="center">Follow @nightlybuildio</a>
 
-				<p class="button"><a class="big-button" href="mailto:hello@nightlybuild.io">E-Mail us</a></p>
+				<p><a class="button" href="mailto:hello@nightlybuild.io">Contact Us</a></p>
 
-				<p><a href="#legal">Legal Notice</a></p>
+				<p><a href="#legal">Legal Notice</a> &bull; <a href="#code-of-conduct">Code of Conduct</a></p>
 			</section>
 		</footer>
 
@@ -330,6 +337,8 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					<h3>After Party</h3>
 				</header>
 				<div class="modal-content">
+					<p>We will provide more information about the after party pretty soon.</p>
+					<p>Please make sure to sleep enough the evening before - it's going to be a long night.</p>
 					<!-- <iframe src="#maphere"></iframe> -->
 				</div>
 			</div>
@@ -372,6 +381,8 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				data-dismiss="modal">×</a>
 		</section>
 
+		<script src="vendor/jquery.js"></script>
+		<script src="vendor/rAF.js"></script>
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script src="vendor/modal.js"></script>
 		<script src="main.js"></script>
