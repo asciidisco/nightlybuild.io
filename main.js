@@ -32,7 +32,7 @@
 		maxZoom: 18,
 	}).addTo(map);
 
-	L.marker([50.95109041843519, 6.9196271896362305]).addTo(map);
+	L.marker([50.94744, 6.91302]).addTo(map);
 
 	/**
 	 * Gallery
