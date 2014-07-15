@@ -226,7 +226,13 @@ img {
 
 .button__label {
 	float: left;
-	padding: 0 1.5em;
+	padding: 0 0.75em;
+}
+
+@media (min-width: 35em) {
+	.button__label {
+		padding: 0 1.5em;
+	}
 }
 
 .button__value {
@@ -247,9 +253,22 @@ img {
 .schedule,
 .footer__inner {
 	margin: 0 auto;
+	padding: 0 1em;
 	max-width: 60rem;
 
 	line-height: 1.4;
+}
+
+@media (min-width: 42em) {
+	.header,
+	.hardfacts,
+	.speakers,
+	.sponsors,
+	.location__inner,
+	.schedule,
+	.footer__inner {
+		padding: 0;
+	}
 }
 
 
