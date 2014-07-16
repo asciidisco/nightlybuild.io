@@ -30,8 +30,7 @@ module.exports = function(grunt) {
           removeComments: true,
           collapseWhitespace: true,
           removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          minifyJS: true
+          removeRedundantAttributes: true
         },
         files: {
           'dist/index.html': 'dist/index.html'
