@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/asciidisco/nightlybuild.io.git"
+    "url": "git@github.com:asciidisco/nightlybuild.io.git"
   },
   "keywords": [
     "None"
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/asciidisco/nightlybuild.io/issues"
   },
-  "homepage": "https://github.com/asciidisco/nightlybuild.io"
+  "homepage": "http://nightlybuild.io/"
 }
