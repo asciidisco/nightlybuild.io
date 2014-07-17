@@ -487,15 +487,23 @@ pre .green {
 	text-align: center;
 }
 
+
 .cards li {
-	display: table-cell;
-	width: 20%;
+	display: block;
+	width: 100%;
 	padding: 0.25rem;
 	background: #fff;
-	vertical-align: top;
 	font-size: 0.75rem;
 	border: 0.5rem solid #00161d;
 	border-width: 0 0.5rem;
+}
+
+@media (min-width: 35em) {
+	.cards li {
+		display: table-cell;
+		width: 20%;
+		vertical-align: top;
+	}
 }
 
 .cards a {
@@ -504,6 +512,7 @@ pre .green {
 
 .cards img {
 	display: block;
+	margin: 0 auto;
 	border-radius: 50%;
 }
 
