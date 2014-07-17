@@ -1,0 +1,35 @@
+{
+  "name": "nightlybuild.io",
+  "version": "0.1.0",
+  "description": "Homepage of the Nightlybuild conference",
+  "main": "index.html",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-concat": "0.4.0",
+    "grunt-contrib-copy": "0.5.0",
+    "grunt-contrib-cssmin": "0.10.0",
+    "grunt-contrib-htmlmin": "0.3.0",
+    "grunt-contrib-imagemin": "0.7.1",
+    "grunt-contrib-uglify": "0.5.0",
+    "grunt-filerev": "0.2.1",
+    "grunt-svgmin": "0.4.0",
+    "grunt-usemin": "2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:asciidisco/nightlybuild.io.git"
+  },
+  "keywords": [
+    "None"
+  ],
+  "author": "The nightlybuilders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asciidisco/nightlybuild.io/issues"
+  },
+  "homepage": "http://nightlybuild.io/"
+}
