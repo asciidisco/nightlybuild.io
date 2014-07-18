@@ -120,44 +120,6 @@
 	}());
 
 	/**
-	 * Parallax scrolling
-	 */
-	(function () {
-		var $scrollTop = $('[data-scroll-top]');
-		var $scrollBottom = $('[data-scroll-bottom]');
-		var $element;
-
-		var scrollPosition = 0;
-
-		var _callback = function () {
-			var scroll = window.pageYOffset;
-			var i;
-
-			if (scrollPosition === scroll) {
-				window.cancelAnimationFrame(_callback);
-
-				return false;
-			}
-
-			for (i = 0; i < $scrollTop.length; i++) {
-				$element = $($scrollTop[i]);
-				$element.css('transform', 'translateY(' + ((scroll - $element.parent().offset().top) / 4) + 'px)');
-			}
-
-			for (i = 0; i < $scrollBottom.length; i++) {
-				$element = $($scrollBottom[i]);
-				$element.css('transform', 'translateY(' + ((scroll - $element.parent().offset().top) / -4) + 'px)');
-			}
-			window.cancelAnimationFrame(_callback);
-		};
-
-		$(window).on('scroll', function () {
-			window.requestAnimationFrame(_callback);
-		});
-	}());
-
-
-	/**
 	 * Tracking
 	 */
 
