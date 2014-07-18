@@ -411,6 +411,11 @@ pre {
 	border-radius: 0.3125rem 0.3125rem 0 0;
 }
 
+.terminal-wrapper {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
 pre .command-prompt {
 	color: #0188e1;
 }
