@@ -11,12 +11,12 @@
 		<link rel="dns-prefetch" href="//nightlybuild.io">
 		<link rel="prefetch" href="https://ti.to/nightlybuild/nightly14">
 
-	<!-- build:css style.min.css -->
+		<!-- build:css style.min.css -->
 		<link rel="stylesheet" href="vendor/normalize.css">
 		<link rel="stylesheet" href="vendor/modal.css">
 		<link rel="stylesheet" href="vendor/loader.css">
 		<link rel="stylesheet" href="style.css">
-	<!-- endbuild -->
+		<!-- endbuild -->
 
 		<!-- Font loader -->
 		<script>
@@ -60,12 +60,13 @@
 				</a>
 			</p>
 
-			<div class="header__background" data-scroll-top></div>
+			<div class="header__background" data-parallax-top></div>
 		</header>
 
 		<main role="main" class="main">
 			<section class="hardfacts" id="facts">
 <pre class="terminal">
+<div class="terminal-wrapper">
 <span class="command-prompt">what &amp;&amp; when &amp;&amp; where &amp;&amp; who &amp;&amp; how-much &gt; nightlybuild.io</span>
 
 <span class="command-prompt">Running <span class="command-task">nightlybuild:what"</span> task</span>
@@ -89,6 +90,7 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 
 <span class="command-prompt">Done, without errors.</span>
 <span class="command-prompt"><span class="green">>></span><span class="active-prompt"></span></span>
+</div>
 </pre>
 			</section>
 
@@ -412,10 +414,11 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<!-- build:js main.min.js -->
-		<script src="vendor/jquery.js"></script>
-		<script src="vendor/rAF.js"></script>
-		<script src="vendor/modal.js"></script>
-		<script src="main.js"></script>
+	<script src="vendor/jquery.js"></script>
+	<script src="vendor/rAF.js"></script>
+	<script src="vendor/hongkong.js"></script>
+	<script src="vendor/modal.js"></script>
+	<script src="main.js"></script>
 	<!-- endbuild -->
 
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
