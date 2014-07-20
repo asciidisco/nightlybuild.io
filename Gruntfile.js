@@ -185,7 +185,7 @@ module.exports = function(grunt) {
     // housekeeping; remove unecessary artifacts that were generated during the process
     'clean:afterMin'
   ]);
-  
+
   grunt.registerTask('deploy', [
     'clean:site',
     'copy:dist'
