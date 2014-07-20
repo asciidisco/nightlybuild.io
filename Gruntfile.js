@@ -6,7 +6,8 @@ module.exports = function(grunt) {
       // clean `distributable` folder (most probably before triggering a new build)
       dist: ['dist'],
       // clean non-used artifacts from the `distributable` folder after the build
-      afterMin: ['dist/style.css', 'dist/main.js']
+      afterMin: ['dist/style.css', 'dist/main.js'],
+      site: ['_site/*.css', '_site/*.js', '_site/img/']
     },
 
     copy: {
@@ -19,6 +20,15 @@ module.exports = function(grunt) {
           {expand: true, src: ['robots.txt'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['conference.ics'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['CNAME'], dest: 'dist/', filter: 'isFile'}
+        ]
+      },
+      dist: {
+        files: [
+          {expand: true, cwd: 'dist', src: ['img/**'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['*.html'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['*.js'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['*.css'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['CNAME', 'conference.ics', 'robots.txt'], dest: '_site/'},
         ]
       }
     },
@@ -160,7 +170,7 @@ module.exports = function(grunt) {
     'cssmin',
     // copy over the static assets like the robots.txt
     // static means here, that they won't be changed from some automated process
-    'copy',
+    'copy:main',
     // losslessy optimize images & copy them to the dist folder
     'imagemin',
     // losslessy optimize svgs & copy them to the dist folder
@@ -175,4 +185,10 @@ module.exports = function(grunt) {
     // housekeeping; remove unecessary artifacts that were generated during the process
     'clean:afterMin'
   ]);
+  
+  grunt.registerTask('deploy', [
+    'clean:site',
+    'copy:dist'
+  ]);
+    
 };
