@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     concat: {
       // concatenate js files (manually because of keeping the order intact)
       js: {
-        src: ['vendor/jquery.js', 'vendor/modal.js', 'vendor/hongkong.js', 'vendor/rAF.js', 'main.js'],
+        src: ['vendor/jquery.js', 'vendor/modal.js', 'vendor/rAF.js', 'vendor/hongkong.js', 'main.js'],
         dest: 'dist/main.js'
       },
       // concatenate css files (manually because of keeping the order intact)
