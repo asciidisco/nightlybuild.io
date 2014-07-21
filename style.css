@@ -259,19 +259,6 @@ img {
 	line-height: 1.4;
 }
 
-@media (min-width: 42em) {
-	.header,
-	.hardfacts,
-	.speakers,
-	.sponsors,
-	.location__inner,
-	.schedule,
-	.footer__inner {
-		padding: 0;
-	}
-}
-
-
 /**
  * Theme
  */
