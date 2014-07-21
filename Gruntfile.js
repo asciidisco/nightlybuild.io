@@ -2,6 +2,18 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    autoprefixer: {
+      build: {
+        src: 'dist/style.css',
+        dest: 'dist/style.css'
+      },
+      options: {
+        // available options:
+        // https://github.com/nDmitry/grunt-autoprefixer#options
+        browsers: [ '> 1%', 'last 2 versions' ],
+      }
+    },
+
     clean: {
       // clean `distributable` folder (most probably before triggering a new build)
       dist: ['dist'],
@@ -145,6 +157,7 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -166,6 +179,8 @@ module.exports = function(grunt) {
     'concat',
     // minify the concatenated js files in the dist folder
     'uglify',
+    // parse the concatenated css files and add vendor-prefixed CSS properties
+    'autoprefixer',
     // minify the concatenated css files in the dist folder
     'cssmin',
     // copy over the static assets like the robots.txt
@@ -190,5 +205,5 @@ module.exports = function(grunt) {
     'clean:site',
     'copy:dist'
   ]);
-    
+
 };
