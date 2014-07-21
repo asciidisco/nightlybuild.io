@@ -31,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/asciidisco/nightlybuild.io/issues"
   },
-  "homepage": "http://nightlybuild.io/"
+  "homepage": "http://nightlybuild.io/",
+  "private": true
 }
