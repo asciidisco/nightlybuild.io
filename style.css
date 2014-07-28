@@ -206,6 +206,7 @@ img {
  */
 .header,
 .hardfacts,
+.notice,
 .speakers,
 .sponsors,
 .location__inner,
@@ -381,6 +382,13 @@ pre .green {
 	animation: blink 1s infinite;
 }
 
+/**
+ * Notice
+ */
+.notice {
+	margin-top: 5em;
+	text-align: center;
+}
 
 /**
  * Speakers
