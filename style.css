@@ -15,12 +15,6 @@
 	box-sizing: border-box;
 }
 
-@media (max-width: 25em) {
-  body {
-    color: red !important;
-  }
-}
-
 @media (min-width: 42em) {
 	body {
 		font-variant-ligatures: common-ligatures;
