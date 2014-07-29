@@ -15,6 +15,12 @@
 	box-sizing: border-box;
 }
 
+@media (max-width: 25em) {
+  body {
+    color: red !important;
+  }
+}
+
 @media (min-width: 42em) {
 	body {
 		font-variant-ligatures: common-ligatures;
@@ -396,6 +402,16 @@ pre .green {
 .speakers {
 	padding-top: 2em;
 	padding-bottom: 3em;
+}
+
+.speakers li img {
+  max-height: 15rem;
+}
+
+@media (min-width: 35em) {
+  .speakers .cards:last-of-type li {
+    margin-top: 1.5em;
+  }  
 }
 
 /**
