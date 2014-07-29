@@ -43,7 +43,16 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist', src: ['*.css'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['CNAME', 'conference.ics', 'robots.txt', 'favicon.ico'], dest: '_site/'},
         ]
-      }
+      },
+      dist: {
+        files: [
+          {expand: true, cwd: 'dist', src: ['img/**'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['*.html'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['*.js'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['*.css'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['CNAME', 'conference.ics', 'robots.txt'], dest: '_site/'},
+        ]
+      }      
     },
 
     concat: {
