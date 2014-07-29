@@ -31,7 +31,8 @@ module.exports = function(grunt) {
           {expand: true, src: ['codeofconduct.html'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['robots.txt'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['conference.ics'], dest: 'dist/', filter: 'isFile'},
-          {expand: true, src: ['CNAME'], dest: 'dist/', filter: 'isFile'}
+          {expand: true, src: ['CNAME'], dest: 'dist/', filter: 'isFile'},
+          {expand: true, src: ['favicon.ico'], dest: 'dist/', filter: 'isFile'}
         ]
       },
       dist: {
@@ -40,7 +41,7 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist', src: ['*.html'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['*.js'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['*.css'], dest: '_site/'},
-          {expand: true, cwd: 'dist', src: ['CNAME', 'conference.ics', 'robots.txt'], dest: '_site/'},
+          {expand: true, cwd: 'dist', src: ['CNAME', 'conference.ics', 'robots.txt', 'favicon.ico'], dest: '_site/'},
         ]
       }
     },
@@ -101,7 +102,7 @@ module.exports = function(grunt) {
         length: 8
       },
       images: {
-        src: 'dist/img/**/*.{jpg,jpeg,gif,png,webp,svg}'
+        src: ['dist/img/**/*.{jpg,jpeg,gif,png,webp,svg}', '!**/favicon/**', '!**/touch/**']
       },
       js: {
         src: 'dist/*.min.js'
