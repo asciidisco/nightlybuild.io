@@ -102,7 +102,7 @@ module.exports = function(grunt) {
         length: 8
       },
       images: {
-        src: ['dist/img/**/*.{jpg,jpeg,gif,png,webp,svg}', '!**/favicon/**', '!**/touch/**']
+        src: ['dist/img/**/*.{jpg,jpeg,gif,png,webp,svg}', '!**/favicon/**', '!**/touch/**', '!**/social/**']
       },
       js: {
         src: 'dist/*.min.js'
