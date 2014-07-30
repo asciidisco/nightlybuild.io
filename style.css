@@ -1,7 +1,8 @@
 /*
  * Nightlybuild.io
  *
- * @authors: Anselm Hannemann, Sebastian Golaschs
+ * @authors: Anselm Hannemann, Sebastian Golasch,
+ *           Hans-Christian Reinl, Simon Koch
  * @date: 2014-06-29
  *
  */
@@ -138,6 +139,7 @@ img {
 		background: rgba(220, 220, 220, 1);
 	}
 }
+
 @keyframes rolloutlinetoright {
 	from {
 		width: 0;
@@ -259,7 +261,7 @@ img {
 
 	text-indent: 0;
 
-	background: url('img/logo.svg') no-repeat 50% 50%;
+	background: url('img/logo.png') no-repeat 50% 50%;
 	background-size: auto 100%;
 }
 
@@ -405,7 +407,7 @@ pre .green {
 @media (min-width: 35em) {
   .speakers .cards:last-of-type li {
     margin-top: 1.5em;
-  }  
+  }
 }
 
 /**
