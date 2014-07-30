@@ -265,6 +265,16 @@ img {
 	background-size: auto 100%;
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5),
+	(min-resolution: 150dpi),
+	(min-resolution: 1.5dppx) {
+
+	.header__logo:after {
+		background: url('img/logo@2x.png') no-repeat 50% 50%;
+		background-size: 100% 100%;
+	}
+}
+
 .header__date {
 	margin-top: 2rem;
 	font-size: 1.25rem;
