@@ -211,13 +211,14 @@ img {
 }
 
 /**
- * Wrapper
+ * Wrapper for layout
  */
 .header,
 .hardfacts,
 .notice,
 .speakers,
 .sponsors,
+.friends__inner,
 .location__inner,
 .schedule,
 .footer__inner {
@@ -232,9 +233,15 @@ img {
  * Theme
  */
 .location,
+.friends,
 .footer {
 	background: #004653;
 	color: #fff;
+}
+
+.friends .cards li,
+.footer .cards li {
+	border-color: #004653;
 }
 
 /**
@@ -614,6 +621,14 @@ pre .green {
 		}
 
 /**
+ * Friends
+ */
+.friends__inner {
+	padding: 1em 1em 5em;
+}
+
+
+/**
  * Footer
  */
 .footer {
@@ -635,10 +650,6 @@ pre .green {
 	margin-bottom: 3rem;
 	font-size: 0.8em;
 }
-
-	.team li {
-		border-color: #004653;
-	}
 
 /**
  * Gallery
