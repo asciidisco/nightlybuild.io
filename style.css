@@ -353,6 +353,7 @@ pre {
 
 .terminal {
 	position: relative;
+	z-index: 2;
 	padding-top: 3rem;
 	padding-bottom: 0.7rem;
 	overflow: auto;
@@ -583,10 +584,10 @@ pre .green {
 	.sponsors .cards--gold {
 		margin: 5% 0 5% 0;
 	}
-	
+
   .sponsors > ul:nth-child(6) {
   	margin-top: -1rem;
-  }	
+  }
 }
 
 @media (max-width: 35em) {
@@ -608,15 +609,15 @@ pre .green {
 	.sponsors .cards--gold li {
 		width: 100%;
 	}
-	
+
   .sponsors .trivago-exception img {
     margin-top: 0;
   }
-  
+
   .sponsors > ul:nth-child(6) {
   	margin-top: 0;
-  }	
-	
+  }
+
 }
 
 /**
