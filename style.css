@@ -655,6 +655,13 @@ pre .green {
 	padding: 1em 1em 5em;
 }
 
+.friends .cards {
+	margin-bottom: 1em;
+}
+
+.friends .cards:last-child {
+	margin-bottom: 0em;
+}
 
 /**
  * Footer
@@ -715,21 +722,21 @@ pre .green {
 	margin: 0;
 }
 
-	.gallery__images li {
-		float: left;
-		display: inline;
-		max-width: 50%;
-		padding: 2px;
-	}
+.gallery__images li {
+	float: left;
+	display: inline;
+	max-width: 50%;
+	padding: 2px;
+}
 
-	.gallery__images img {
-		display: block;
-		border: 1px solid rgba(210, 210, 210, 0.4);
-		filter: grayscale(80%);
-	}
+.gallery__images img {
+	display: block;
+	border: 1px solid rgba(210, 210, 210, 0.4);
+	filter: grayscale(80%);
+}
 
-	.gallery__images img:hover,
-	.gallery__images .is-active img {
-		border-color: rgba(210, 210, 210, 0.8);
-		filter: grayscale(0);
-	}
+.gallery__images img:hover,
+.gallery__images .is-active img {
+	border-color: rgba(210, 210, 210, 0.8);
+	filter: grayscale(0);
+}
