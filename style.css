@@ -1,10 +1,11 @@
 /*
  * Nightlybuild.io
  *
- * @authors: Anselm Hannemann, Sebastian Golasch,
- *           Hans-Christian Reinl, Simon Koch
+ * @authors: Anselm Hannemann,
+ *           Sebastian Golasch,
+ *           Hans-Christian Reinl,
+ *           Simon Koch
  * @date: 2014-06-29
- *
  */
 
 /**
@@ -573,11 +574,11 @@ pre .green {
 .sponsors .trivago-exception img {
 	border-radius: 0;
 	min-height: 3rem;
-  margin-top: 5rem;
+	margin-top: 5rem;
 }
 
 .sponsors li.trivago-exception > p {
-  margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 @media (max-width: 50em) {
@@ -585,9 +586,9 @@ pre .green {
 		margin: 5% 0 5% 0;
 	}
 
-  .sponsors > ul:nth-child(6) {
-  	margin-top: -1rem;
-  }
+	.sponsors > ul:nth-child(6) {
+		margin-top: -1rem;
+	}
 }
 
 @media (max-width: 35em) {
@@ -610,13 +611,13 @@ pre .green {
 		width: 100%;
 	}
 
-  .sponsors .trivago-exception img {
-    margin-top: 0;
-  }
+	.sponsors .trivago-exception img {
+		margin-top: 0;
+	}
 
-  .sponsors > ul:nth-child(6) {
-  	margin-top: 0;
-  }
+	.sponsors > ul:nth-child(6) {
+		margin-top: 0;
+	}
 
 }
 
