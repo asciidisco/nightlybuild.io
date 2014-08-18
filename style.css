@@ -549,6 +549,10 @@ pre .green {
 	margin-bottom: 3em;
 }
 
+.sponsors .cards img {
+	border-radius: 0;
+}
+
 .sponsors .cards--gold {
 	margin-left: 16.65%;
 	margin-right: 16.65%;
@@ -569,16 +573,6 @@ pre .green {
 
 .sponsors > ul:nth-child(6) {
 	margin-top: -2rem;
-}
-
-.sponsors .trivago-exception img {
-	border-radius: 0;
-	min-height: 3rem;
-	margin-top: 5rem;
-}
-
-.sponsors li.trivago-exception > p {
-	margin-top: 3rem;
 }
 
 @media (max-width: 50em) {
@@ -611,14 +605,9 @@ pre .green {
 		width: 100%;
 	}
 
-	.sponsors .trivago-exception img {
-		margin-top: 0;
-	}
-
 	.sponsors > ul:nth-child(6) {
 		margin-top: 0;
 	}
-
 }
 
 /**
