@@ -570,7 +570,7 @@ pre .green {
 }
 
 .sponsors .cards {
-	margin-bottom: 3em;
+	margin: 0 25% 3em;
 }
 
 .sponsors .cards img {
@@ -578,8 +578,8 @@ pre .green {
 }
 
 .sponsors .cards--gold {
-	margin-left: 16.65%;
-	margin-right: 16.65%;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .sponsors .cards--gold li {
