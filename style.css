@@ -47,7 +47,8 @@ h3,
 .header__date,
 .button,
 .font-primary,
-.header__summary {
+.header__summary,
+.sold-out {
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -328,6 +329,29 @@ img {
 	margin: 1.5rem auto;
 	text-align: center;
 	color: #fff;
+}
+
+/**
+ * Sold out info
+ * Displayed instead of buy ticket button
+ */
+.sold-out {
+	display: inline-block;
+	margin-top: 1.0rem;
+	padding: 0.4rem 0;
+	border-top: 0.2rem solid white;
+	border-bottom: 0.2rem solid white;
+	font-size: 2.3rem;
+	text-transform: uppercase;
+}
+
+/**
+ * Waiting list notice
+ * Displayed instead of buy ticket button
+ */
+.waiting-list {
+	padding-top: 0.4rem;
+	padding-bottom: 2rem;
 }
 
 /**
