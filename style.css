@@ -583,7 +583,8 @@ pre .green {
 }
 
 .sponsors .cards--gold li {
-	padding: 2em;
+	position: relative;
+	padding: 1em 1em 3em;
 	font-size: 1em;
 }
 
@@ -591,12 +592,29 @@ pre .green {
 	margin: 0;
 }
 
-.sponsors .cards--gold li {
-	padding: 1em;
-}
-
 .sponsors > ul:nth-child(6) {
 	margin-top: -2rem;
+}
+
+.sponsors--contact {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding: 0.5em 1em;
+	background: #eee;
+}
+
+li:hover .sponsors--contact {
+	background: #008ea8;
+	color: #fff;
+}
+
+/* Modal */
+.sponsor__contact__image {
+	float: left;
+	width: 150px;
+	margin: 0 1em 0 0;
 }
 
 @media (max-width: 50em) {

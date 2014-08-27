@@ -277,7 +277,8 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				<h2>Sponsors</h2>
 
 				<p>We are very thankful to everyone who helps us with the event &ndash; especially our sponsors supporting us with money so we can keep the admission price that low and cover all our costs.</p>
-				<p class="sponsors__button"><a class="button button--small" href="#sponsoring">Become a Sponsor</a></p>
+
+				<p>Our Gold Sonsors will have a dedicated contact person at the conference for your questions. Please come and ask them about the company's work, jobs and opinions.</p>
 
 				<h3>Gold Sponsors</h3>
 
@@ -285,14 +286,17 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 					<li>
 						<a href="http://www.denkwerk.com/" target="_blank"><img src="img/sponsors/denkwerk.svg"></a>
 						<p><strong>denkwerk</strong>, digital agency in Cologne and Berlin</p>
+						<a href="#sponsor/denkwerk" class="sponsors--contact">Contact</a>
 					</li>
 					<li>
 						<a href="https://www.artegic.de" target="_blank"><img src="img/sponsors/artegic.jpg"></a>
 						<p><strong>Artegic</strong>, Marketing engineering, automation &amp; Online CRM</p>
+						<a href="#sponsor/artegic" class="sponsors--contact">Contact</a>
 					</li>
 					<li>
 						<a href="http://www.trivago.de" target="_blank"><img src="img/sponsors/trivago.png"></a>
 						<p><strong>trivago</strong>, is the world's largest hotel search website and headquartered in D&uuml;sseldorf</p>
+						<a href="#sponsor/trivago" class="sponsors--contact">Contact</a>
 					</li>
 				</ul>
 
@@ -497,8 +501,8 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 			data-dismiss="modal">×</a>
 		</section>
 
-		<section class="modal--show modal-sposnoring" id="sponsoring" tabindex="-1"
-		role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+		<section class="modal--show modal-sponsoring" id="sponsoring" tabindex="-1"
+				role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
 			<div class="modal-inner">
 				<header id="modal-label">
@@ -511,8 +515,63 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				</div>
 			</div>
 
-			<a href="#!" class="modal-close" title="Close the after party information modal" data-close="Close"
-			data-dismiss="modal">×</a>
+			<a href="#!" class="modal-close" title="Close the after party information modal"
+					data-close="Close" data-dismiss="modal">×</a>
+		</section>
+
+		<section class="modal--show sponsor__contact" id="sponsor/denkwerk" tabindex="-1"
+				role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+			<div class="modal-inner">
+				<header id="modal-label">
+					<h3>denkwerk - Gold Sponsor</h3>
+				</header>
+				<div class="modal-content"></div>
+			</div>
+
+			<a href="#!" class="modal-close" title="Close the after party information modal"
+					data-close="Close" data-dismiss="modal">×</a>
+		</section>
+
+		<section class="modal--show sponsor__contact" id="sponsor/artegic" tabindex="-1"
+				role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+			<div class="modal-inner">
+				<header id="modal-label">
+					<h3>Artigic - Gold Sponsor</h3>
+				</header>
+				<div class="modal-content">
+
+				</div>
+			</div>
+
+			<a href="#!" class="modal-close" title="Close the after party information modal"
+					data-close="Close" data-dismiss="modal">×</a>
+		</section>
+
+		<section class="modal--show sponsor__contact" id="sponsor/trivago" tabindex="-1"
+				role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+			<div class="modal-inner">
+				<header id="modal-label">
+					<h3>trivago - Gold Sponsor</h3>
+				</header>
+				<div class="modal-content">
+					<p>trivago is a travel metasearch engine focusing on hotels. The site compares prices for over 730,700 hotels from more than 200 booking sites, such as Expedia, Booking.com, and Priceline.com. Based in Düsseldorf, Germany, the website receives about 45 million users per month on its 47 international platforms.</p>
+					<p>We are looking for you to join us at our company and work with highly skilled professionals.</p>
+					<p>Currently we have <a href="http://www.trivago.de/static/career_opportunities/career_opportunities">234 jobs</a> open.</p>
+					<p>Please contact our agent Andy at the conference if you have any question.</p>
+
+					<h3>Andy Grünwald</h3>
+					<figure class="sponsor__contact__image">
+						<img src="img/sponsors/details/andreas-grunwald.jpg">
+					</figure>
+					<p>Software Engineer at @trivago. Organizer of @PHPUGDus. Open-Source-Fan. B.Sc. in Business Information Technology. Twitter @andygrunwald.</p>
+				</div>
+			</div>
+
+			<a href="#!" class="modal-close" title="Close the after party information modal"
+					data-close="Close" data-dismiss="modal">×</a>
 		</section>
 
 		<section class="modal--show" id="legal" tabindex="-1" role="dialog"
@@ -549,20 +608,14 @@ Compressed size: <span class="green">Drinks</span> included (<span class="green"
 				data-dismiss="modal">×</a>
 		</section>
 
-	<div class="hidden-trivago" style="display:none">
-		<span id="andy-grunwald">Software Engineer at @trivago. Organizer of @PHPUGDus. Open-Source-Fan. B.Sc. in Business Information Technology. Twitter @andygrunwald</span>
-		<span id="dominik-nedderhoff">Since years Dominik Nedderhoff is a passionate Frontend Developer. His key area is in UI/UX – Development and he loves CSS & SASS</span>
-		<span id="christoph-reinhartz">Frontend Engineer and CSS Architect at trivago. Responsible for the UI of the hotel search. Twitter @pistenprinz</span>
-	</div>
-
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-	<!-- build:js main.min.js -->
-	<script src="vendor/jquery.js"></script>
-	<script src="vendor/rAF.js"></script>
-	<script src="vendor/hongkong.js"></script>
-	<script src="vendor/modal.js"></script>
-	<script src="main.js"></script>
-	<!-- endbuild -->
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<!-- build:js main.min.js -->
+		<script src="vendor/jquery.js"></script>
+		<script src="vendor/rAF.js"></script>
+		<script src="vendor/hongkong.js"></script>
+		<script src="vendor/modal.js"></script>
+		<script src="main.js"></script>
+		<!-- endbuild -->
 
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</body>
