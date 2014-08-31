@@ -595,23 +595,21 @@ pre .green {
 	padding: 1em;
 }
 
-.sponsors > ul:nth-child(6) {
-	margin-top: -2rem;
+.sponsors .cards img {
+	max-height: 210px;
+	width: 100%;
 }
 
 @media (max-width: 50em) {
 	.sponsors .cards--gold {
 		margin: 5% 0 5% 0;
 	}
-
-	.sponsors > ul:nth-child(6) {
-		margin-top: -1rem;
-	}
 }
 
 @media (max-width: 35em) {
 	.sponsors .cards {
 		overflow: hidden;
+		margin: 0 -0.5rem;
 	}
 
 	.sponsors .cards li {
@@ -621,16 +619,8 @@ pre .green {
 		margin-bottom: 0;
 	}
 
-	.sponsors .cards--gold {
-		margin: 0 -0.5rem;
-	}
-
 	.sponsors .cards--gold li {
 		width: 100%;
-	}
-
-	.sponsors > ul:nth-child(6) {
-		margin-top: 0;
 	}
 }
 
