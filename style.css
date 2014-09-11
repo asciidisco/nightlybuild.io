@@ -667,6 +667,14 @@ pre .green {
 	margin-bottom: 0em;
 }
 
+.friends .cards li {
+	width: 25%;
+}
+
+.friends .cards.no-auto-grow li {
+	flex-grow: 0;
+}
+
 /**
  * Footer
  */
