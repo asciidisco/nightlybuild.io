@@ -180,7 +180,7 @@ module.exports = function(grunt) {
     // losslessy optimize images & copy them to the dist folder
     'imagemin',
     // losslessy optimize svgs & copy them to the dist folder
-    'svgmin',
+    // 'svgmin',
     // revision all the assets in the dist folder (must be done after all assets are copied)
     'filerev',
     // exchange all the in file references with the revisioned counterparts (must be done after the filerev task)
