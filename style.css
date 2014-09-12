@@ -566,6 +566,7 @@ pre .green {
  */
 .sponsors {
 	padding-top: 3em;
+	padding-bottom: 2em;
 	text-align: center;
 }
 
@@ -597,7 +598,7 @@ pre .green {
 
 .sponsors .cards img {
 	max-height: 210px;
-	width: 100%;
+	max-width: 100%;
 }
 
 @media (max-width: 50em) {
@@ -669,6 +670,12 @@ pre .green {
 
 .friends .cards li {
 	width: 25%;
+}
+
+@media (max-width: 35em) {
+	.friends .cards li {
+		width: 100%;
+	}
 }
 
 .friends .cards.no-auto-grow li {
