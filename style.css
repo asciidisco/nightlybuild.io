@@ -613,8 +613,30 @@ li:hover .sponsors--contact {
 /* Modal */
 .sponsor__contact__image {
 	float: left;
-	width: 150px;
+	width: 100px;
 	margin: 0 1em 0 0;
+}
+
+.sponsor__contact__contacts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sponsor__contact__contacts li {
+	border-top: 1px solid #eee;
+	padding-top: 1em;
+	margin-top: 1em;
+	overflow: hidden;
+}
+
+.sponsor__contact__contacts h3 {
+	margin: 0 0 0.5em;
+	font-size: 1.25em;
+}
+
+.sponsor__contact__contacts p {
+	margin: 0.5em 0;
 }
 
 @media (max-width: 50em) {
