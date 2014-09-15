@@ -223,6 +223,7 @@ img {
 .friends__inner,
 .location__inner,
 .schedule,
+.get-there,
 .footer__inner {
 	margin: 0 auto;
 	padding: 0 1em;
@@ -291,6 +292,10 @@ img {
 	}
 }
 
+.header.last-minute .header__logo:after {
+	height: 10rem;
+}
+
 .header__date {
 	margin-top: 2rem;
 	font-size: 1.25rem;
@@ -329,6 +334,24 @@ img {
 	margin: 1.5rem auto;
 	text-align: center;
 	color: #fff;
+}
+
+.nav {
+	text-align: center;
+}
+
+.nav ul {
+	list-style: none;
+}
+
+.nav .button {
+	margin: 0.25rem auto;
+}
+
+@media (min-width: 35em) {
+	.nav ul li {
+		display: inline-block;
+	}
 }
 
 /**
