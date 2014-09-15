@@ -607,12 +607,13 @@ pre .green {
 }
 
 .sponsors .cards--gold li {
-	padding: 2em;
+	position: relative;
+	padding: 1em 1em 3em;
 	font-size: 1em;
 }
 
 .sponsors .cards--gold p {
-	margin: 0;
+	margin: 0 0 2em;
 }
 
 .sponsors .cards--gold li {
@@ -622,6 +623,49 @@ pre .green {
 .sponsors .cards img {
 	max-height: 210px;
 	max-width: 100%;
+}
+
+.sponsors--contact {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding: 0.5em 1em;
+	background: #eee;
+}
+
+li:hover .sponsors--contact {
+	background: #008ea8;
+	color: #fff;
+}
+
+/* Modal */
+.sponsor__contact__image {
+	float: left;
+	width: 100px;
+	margin: 0 1em 0 0;
+}
+
+.sponsor__contact__contacts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sponsor__contact__contacts li {
+	border-top: 1px solid #eee;
+	padding-top: 1em;
+	margin-top: 1em;
+	overflow: hidden;
+}
+
+.sponsor__contact__contacts h3 {
+	margin: 0 0 0.5em;
+	font-size: 1.25em;
+}
+
+.sponsor__contact__contacts p {
+	margin: 0.5em 0;
 }
 
 @media (max-width: 50em) {
