@@ -117,7 +117,7 @@ module.exports = function(grunt) {
     // replace original filenames with their revisioned coungterparts
     // only changes in index.html & our minified css are necessary
     usemin: {
-      html: 'dist/index.html',
+      html: ['dist/index.html', 'dist/last-minute.html'],
       css: ['dist/*.min.*.css']
     },
 
