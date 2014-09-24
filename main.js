@@ -27,12 +27,40 @@
 		doubleClickZoom: false
 	});
 
+	var mapAfterParty = null;
+
 	L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 		attribution: '&copy;<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="http://developer.mapquest.com/web/products/open/map">MapQuest</a>',
 		maxZoom: 18,
 	}).addTo(map);
 
 	L.marker([50.94744, 6.91302]).addTo(map);
+
+
+	/**
+	 * After show map
+	 *
+	 * Must be initialized after layer is opened the first time
+	 * because modal container needs to have a width
+	 */
+	$(document).on('cssmodal:show', function (event) {
+		if (event.target.activeElement.id === 'afterparty' &&
+				mapAfterParty === null) {
+			mapAfterParty = L.map('map--afterparty', {
+				center: [50.9483829, 6.9259739],
+				zoom: 15,
+				scrollWheelZoom: false,
+				doubleClickZoom: false
+			});
+
+			L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+				attribution: '&copy;<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="http://developer.mapquest.com/web/products/open/map">MapQuest</a>',
+				maxZoom: 18,
+			}).addTo(mapAfterParty);
+
+			L.marker([50.9483829, 6.9259739]).addTo(mapAfterParty);
+		}
+	});
 
 	/**
 	 * Gallery
