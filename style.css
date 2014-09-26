@@ -288,7 +288,7 @@ img {
 
 	.header__logo:after {
 		background: url('img/logo@2x.png') no-repeat 50% 50%;
-		background-size: 100% 100%;
+		background-size: auto 100%;
 	}
 }
 
