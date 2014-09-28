@@ -343,6 +343,10 @@ img {
 	padding: 3rem 0;
 }
 
+.header p.header__thanks {
+	color: #9bdb1d; /* neon green */
+}
+
 .nav {
 	text-align: center;
 }
