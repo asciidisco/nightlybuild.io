@@ -185,14 +185,19 @@ img {
 }
 
 .button--small {
-	margin: 0.8em auto;
+	margin: 0.6em auto;
 	padding: 0 0.8em;
-	line-height: 1.8em;
+	font-size: 1.2em;
 }
 
 .button--small + .button--small {
-	margin-left: 0.8em;
+	margin-left: 0.5em;
 }	
+
+.button--secondary {
+	color: #fff;
+	background-color: #004653;
+}
 
 .button--tickets {
 	padding: 0;
