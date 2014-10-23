@@ -185,14 +185,11 @@ img {
 }
 
 .button--small {
-	margin: 0.6em auto;
-	padding: 0 0.8em;
-	font-size: 1.2em;
+	margin: 0.5em auto;
+	padding: 0.4em 0.8em;
+	font-size: 1.1em;
+	line-height: 1.3em;
 }
-
-.button--small + .button--small {
-	margin-left: 0.5em;
-}	
 
 .button--secondary {
 	color: #fff;
