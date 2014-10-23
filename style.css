@@ -185,10 +185,15 @@ img {
 }
 
 .button--small {
-	font-weight: 200;
-	padding: 0 1em;
-	background: #004653;
+	margin: 0.5em auto;
+	padding: 0.4em 0.8em;
+	font-size: 1.1em;
+	line-height: 1.3em;
+}
+
+.button--secondary {
 	color: #fff;
+	background-color: #004653;
 }
 
 .button--tickets {
