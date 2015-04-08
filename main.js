@@ -1,67 +1,6 @@
 (function () {
 	'use strict';
 
-	// Load CSS async. Script adapted from https://github.com/filamentgroup/loadCSS/blob/master/loadCSS.js
-	function loadCSS (href, before, media) {
-		var styleSheet  = window.document.createElement('link');
-		var reference = before || window.document.getElementsByTagName('script')[0];
-
-		styleSheet.rel = "stylesheet";
-		styleSheet.href = href;
-		styleSheet.media = "only x";
-		reference.parentNode.insertBefore(styleSheet, reference);
-
-		setTimeout(
-			function () {
-				styleSheet.media = media || 'all';
-			}
-		);
-	}
-
-	loadCSS('http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css');
-
-	var map = L.map('map', {
-		center: [50.95109, 6.91963],
-		zoom: 13,
-		scrollWheelZoom: false,
-		doubleClickZoom: false
-	});
-
-	var mapAfterParty = null;
-
-	L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-		attribution: '&copy;<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="http://developer.mapquest.com/web/products/open/map">MapQuest</a>',
-		maxZoom: 18,
-	}).addTo(map);
-
-	L.marker([50.94744, 6.91302]).addTo(map);
-
-
-	/**
-	 * After show map
-	 *
-	 * Must be initialized after layer is opened the first time
-	 * because modal container needs to have a width
-	 */
-	$(document).on('cssmodal:show', function (event) {
-		if (event.target.activeElement.id === 'afterparty' &&
-				mapAfterParty === null) {
-			mapAfterParty = L.map('map--afterparty', {
-				center: [50.9483829, 6.9259739],
-				zoom: 15,
-				scrollWheelZoom: false,
-				doubleClickZoom: false
-			});
-
-			L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-				attribution: '&copy;<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="http://developer.mapquest.com/web/products/open/map">MapQuest</a>',
-				maxZoom: 18,
-			}).addTo(mapAfterParty);
-
-			L.marker([50.9483829, 6.9259739]).addTo(mapAfterParty);
-		}
-	});
-
 	/**
 	 * Gallery
 	 */
@@ -77,7 +16,6 @@
 			$('.gallery__image__image img').css('opacity', 1);
 		}, 200);
 	});
-
 
 	/*! A fix for the iOS orientationchange zoom bug.
 	 Script by @scottjehl, rebound by @wilto.
