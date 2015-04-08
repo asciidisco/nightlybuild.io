@@ -24,7 +24,6 @@
 		font-variant-ligatures: common-ligatures;
 		font-feature-settings: 'kern';
 	}
-
 }
 
 body {
@@ -168,11 +167,45 @@ input[type='text'],
 input[type='email'] {
 	color: #000;
 	border: 0;
+	width: 100%;
 	padding: 0.6em 1.8em;
 	text-align: center;
+	border: 2px solid rgba(0, 0, 0, 0);
 	border-radius: 2px;
 }
+	input[type='text']:focus,
+	input[type='email']:focus {
+		border-color: #7DCFB6;
+	}
 
+@media (min-width: 42em) {
+	input[type='text'],
+	input[type='email'] {
+		border-radius: 2px 0 0 2px;
+		width: 20em;
+	}
+}
+
+input[type='submit'] {
+	font-size: 1em;
+	position: relative;
+	top: -1px;
+	width: 100%;
+	padding: 0.25em 0.75em;
+	color: #333;
+	border: 2px solid rgba(0, 0, 0, 0);
+	border-radius: 2px;
+}
+	input[type='submit']:focus {
+		border-color: #fff;
+	}
+
+@media (min-width: 42em) {
+	input[type='submit'] {
+		border-radius: 0 2px 2px 0;
+		width: 10em;
+	}
+}
 /**
  * Button styles
  */
@@ -316,16 +349,6 @@ input[type='email'] {
 	background-size: auto 100%;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5),
-	(min-resolution: 150dpi),
-	(min-resolution: 1.5dppx) {
-
-	.header__logo:after {
-		background: url('img/logo@2x.png') no-repeat 50% 50%;
-		background-size: auto 100%;
-	}
-}
-
 .header.last-minute .header__logo:after {
 	height: 10rem;
 }
@@ -365,14 +388,20 @@ input[type='email'] {
 }
 
 .header p {
-	margin: 1.5rem auto;
 	text-align: center;
 	color: #fff;
 }
 
 .header__thanks {
-	font-size: 3rem;
-	padding: 3rem 0;
+	font-size: 2rem;
+	margin: 2rem auto 1.5rem auto;
+}
+
+@media (min-width: 42em) {
+	.header__thanks {
+		font-size: 3rem;
+		margin: 5rem auto 1.5rem auto;
+	}
 }
 
 .header p.header__thanks {
