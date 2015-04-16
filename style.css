@@ -159,8 +159,14 @@ img {
  */
 
 .form {
-	margin: 0 auto;
+	margin: 2rem auto 0;
 	text-align: center;
+}
+
+@media (min-width: 42em) {
+	.form {
+		margin-top: 2rem;
+	}
 }
 
 input[type='text'],
@@ -168,11 +174,14 @@ input[type='email'] {
 	color: #000;
 	border: 0;
 	width: 100%;
-	padding: 0.6em 1.8em;
+	line-height: 18px;
+	padding: 12px 1.8em 10px;
 	text-align: center;
 	border: 2px solid rgba(0, 0, 0, 0);
-	border-radius: 2px;
+	border-radius: 2px 2px 0 0;
+	vertical-align: top;
 }
+
 	input[type='text']:focus,
 	input[type='email']:focus {
 		border-color: #7DCFB6;
@@ -189,12 +198,13 @@ input[type='email'] {
 input[type='submit'] {
 	font-size: 1em;
 	position: relative;
-	top: -1px;
 	width: 100%;
 	padding: 0.25em 0.75em;
 	color: #333;
 	border: 2px solid rgba(0, 0, 0, 0);
-	border-radius: 2px;
+	border-radius: 0 0 2px 2px ;
+	vertical-align: top;
+	margin-top: 0;
 }
 	input[type='submit']:focus {
 		border-color: #fff;
@@ -202,6 +212,7 @@ input[type='submit'] {
 
 @media (min-width: 42em) {
 	input[type='submit'] {
+		left: -3px;
 		border-radius: 0 2px 2px 0;
 		width: 10em;
 	}
@@ -226,6 +237,7 @@ input[type='submit'] {
 	color: #111;
 	box-shadow: none;
 	border: 0;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
 	border-radius: 2px;
 
 	transition: transform 0.2s;
@@ -321,12 +333,18 @@ input[type='submit'] {
 	position: absolute;
 	z-index: -1;
 	top: 0;
-	left: 0;
+	left: -430px;
 	right: 0;
 	height: 100%;
 
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75)), url('img/header.jpg');
 	background-size: cover;
+}
+
+@media (min-width: 35em) {
+	.header__background {
+		left: 0;
+	}
 }
 
 .header__logo {
@@ -349,6 +367,13 @@ input[type='submit'] {
 	background-size: auto 100%;
 }
 
+@media (max-width: 35em) {
+	.header__logo:after {
+		width: 10rem;
+		height: 10rem;
+	}
+}
+
 .header.last-minute .header__logo:after {
 	height: 10rem;
 }
@@ -367,9 +392,9 @@ input[type='submit'] {
 
 .header__summary {
 	max-width: 42rem;
-	margin: 2rem auto 0;
-	padding: 3rem 0;
-	font-size: 2rem;
+	margin: 1rem auto 0;
+	padding: 2rem 0;
+	font-size: 1.3rem;
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
@@ -387,6 +412,14 @@ input[type='submit'] {
 	animation: rolloutlinetoright 5s forwards;
 }
 
+@media (min-width: 42em) {
+	.header__summary {
+		margin-top: 2rem;
+		font-size: 2rem;
+		padding: 3rem 0;
+	}
+}
+
 .header p {
 	text-align: center;
 	color: #fff;
@@ -395,11 +428,13 @@ input[type='submit'] {
 .header__thanks {
 	font-size: 2rem;
 	margin: 2rem auto 1.5rem auto;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.85),
+	             0 0 1px #000;
 }
 
 @media (min-width: 42em) {
 	.header__thanks {
-		font-size: 3rem;
+		font-size: 3.5rem;
 		margin: 5rem auto 1.5rem auto;
 	}
 }
@@ -604,10 +639,10 @@ pre .green {
 	margin: 1rem 0;
 	padding: 0.25rem;
 	background: #fff;
-	font-size: 0.75rem;
-	border: 0.5rem solid #7DCFB6;
-	border-width: 0 0.5rem;
+	font-size: 0.8rem;
 	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+	overflow: hidden;
 }
 
 @media (min-width: 35em) {
@@ -624,7 +659,7 @@ pre .green {
 		flex-grow: 1;
 		flex-wrap: wrap;
 		width: 20%;
-		margin: 0;
+		margin: 0 0.25rem;
 	}
 }
 
@@ -646,7 +681,7 @@ pre .green {
 }
 
 .cards h3 {
-	margin: 0.5rem;
+	margin: 0.75rem;
 	font-size: 1.25rem;
 }
 
@@ -655,7 +690,7 @@ pre .green {
 }
 
 .cards p {
-	margin: 0.5rem;
+	margin: 0.75rem;
 }
 
 /**
@@ -827,18 +862,15 @@ li:hover .sponsors--contact {
  * Footer
  */
 .footer {
-	margin: 10rem auto 0;
+	margin: 4rem auto 0;
 	padding: 1rem 0;
 	text-align: center;
+	font-size: 0.9rem;
 }
 
-	.footer p {
-		font-size: 0.75rem;
+	.footer p a {
+		color: #fff;
 	}
-
-		.footer p a {
-			color: #fff;
-		}
 
 	.footer .twitter-follow-button {
 		display: block;
@@ -846,13 +878,30 @@ li:hover .sponsors--contact {
 	}
 
 .team {
-	margin-bottom: 3rem;
-	font-size: 0.8em;
+	list-style: none;
+	margin: 0 0 3rem;
+	text-align: left;
 }
+
+	.team li {
+		padding: 0;
+	}
+
+	.team img {
+		border-radius: 0;
+		border: 0;
+	}
+
 	.team h3 a,
 	.team p a {
 		color: #004653;
 	}
+
+@media (min-width: 42em) {
+	.footer {
+		margin-top: 10rem;
+	}
+}
 
 /**
  * Gallery
