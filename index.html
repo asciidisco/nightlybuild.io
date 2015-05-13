@@ -78,7 +78,11 @@
 
 			<!-- Begin MailChimp Signup Form -->
 			<div id="mc_embed_signup">
-				<form action="//drublic.us9.list-manage.com/subscribe/post?u=750875ebc78057d570fe3b4ef&amp;id=7b0e759ff2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+				<form action="//drublic.us9.list-manage.com/subscribe/post" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+					<!-- Hidden fields for form submit via get to fix the iOS webview issue -->
+					<input type="hidden" name="u" value="750875ebc78057d570fe3b4ef">
+					<input type="hidden" name="id" value="7b0e759ff2">
+
 					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter Email Address" required>
 					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					<div style="position: absolute; left: -5000px;">
