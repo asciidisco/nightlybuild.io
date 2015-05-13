@@ -420,7 +420,8 @@ input[type='submit'] {
 	}
 }
 
-.header p {
+.header p,
+.header h3 {
 	text-align: center;
 	color: #fff;
 }
