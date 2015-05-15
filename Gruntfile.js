@@ -33,6 +33,7 @@ module.exports = function(grunt) {
           {expand: true, src: ['robots.txt'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['conference.ics'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['CNAME'], dest: 'dist/', filter: 'isFile'},
+          {expand: true, src: ['2014/**/*'], dest: 'dist/'},
           {expand: true, src: ['favicon.ico'], dest: 'dist/', filter: 'isFile'}
         ]
       },
@@ -40,7 +41,6 @@ module.exports = function(grunt) {
         files: [
           {expand: true, cwd: 'dist', src: ['img/**'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['slides/**'], dest: '_site/'},
-          {expand: true, cwd: 'dist', src: ['2014/**'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['*.html'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['*.js'], dest: '_site/'},
           {expand: true, cwd: 'dist', src: ['*.css'], dest: '_site/'},
